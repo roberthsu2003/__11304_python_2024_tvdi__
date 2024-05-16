@@ -3,4 +3,10 @@
 ## 上課學址
 https://meet.google.com/wdk-fzdc-swx
 
-[link](./link/)
+這是什麼
+
+- 這是第一排
+- 這是第2排
+
+1. 這是python1
+2. 這是python2
