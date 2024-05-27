@@ -12,5 +12,5 @@ response:Response = requests.get(url)
 
 with open("aqi1.json","wb") as fd:
     for chunk in response.iter_content(chunk_size=128):
-        fd.write(chunk)
+        fd.write(chunk) 
 ```
