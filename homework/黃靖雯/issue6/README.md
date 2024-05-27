@@ -6,8 +6,8 @@
 
 ### _將位址使用requests.get 賦值response_
 
-response:Response = requests.get(url)
-使用model requests的內建功能
+##### response:Response = requests.get(url)
+##### 使用model requests的內建功能
 
 with open("aqi1.json","wb") as fd:
     for chunk in response.iter_content(chunk_size=128):
