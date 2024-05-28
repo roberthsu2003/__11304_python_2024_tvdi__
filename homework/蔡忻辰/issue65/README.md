@@ -1,7 +1,7 @@
 
 # HW(issue65)
 
-### [_complex.ipynb]()
+### [_complex.ipynb](./_complex.ipynb)
 
 
 * 作業內容
