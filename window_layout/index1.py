@@ -6,7 +6,7 @@ class Window(tk.Tk):
         super().__init__(**kwargs)
         self.title("pack1")
         self.geometry('300x200')
-
+        
         ttk.Button(self,text="Top").pack()  
 
         ttk.Button(self,text="Middle").pack()  
