@@ -3,5 +3,5 @@
 ### [_complex.ipynb](./_complex.ipynb)
 
 -作業
-1.list內存list
-2.list內存dict
+1. list內存list
+2. list內存dict
