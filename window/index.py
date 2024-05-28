@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 
 def get_names() -> list[str]:
     with open('names.txt',encoding='utf-8') as file:
@@ -11,6 +12,8 @@ class Window(tk.Tk):
         super().__init__(**kwargs)
         #多做一些事
         self.title(title)
+        label:ttk.Label = ttk.Label(self,text="Hello! World!")
+        label.pack()
 
 if __name__ == '__main__':
     names:list[str] = get_names()
