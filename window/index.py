@@ -6,10 +6,15 @@ def get_names() -> list[str]:
     names:list[str] = content.split()
     return names
 
+class Window(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        #多做一些事
+        self.title("我的第一個GUI程式")
+
 if __name__ == '__main__':
     names:list[str] = get_names()
-    window:tk.Tk = tk.Tk()
-    window.title("我的第一個GUI程式")
+    window:Window = Window()    
     window.mainloop()
 
 
