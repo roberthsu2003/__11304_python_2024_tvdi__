@@ -12,8 +12,11 @@ class Window(tk.Tk):
         super().__init__(**kwargs)
         #多做一些事
         self.title(title)
-        label:ttk.Label = ttk.Label(self,text="Hello! World!")
-        label.pack()
+        label:ttk.Label = ttk.Label(self,
+                                    text="Hello! World!",
+                                    font=('Arial',20,'bold'),
+                                    foreground='#f00')
+        label.pack(padx=100,pady=40)
 
 if __name__ == '__main__':
     names:list[str] = get_names()
