@@ -1,8 +1,8 @@
 import tkinter as tk
 
 root = tk.Tk()
-root.title('oxxo.studio')
-root.geometry('200x200')
+root.title('不同顏色的底色')
+root.geometry('300x200')
 
 a = tk.Label(root, text='AAA', background='#f90')
 b = tk.Label(root, text='BBB', background='#09c')
