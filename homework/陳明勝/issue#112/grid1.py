@@ -6,11 +6,11 @@ from tkinter import messagebox
 class GetPassword(Dialog):
 
     def body(self, master):
-        self.title("Enter New Password")
+        self.title("請輸入新密碼:")
 
-        Label(master, text='Old Password:').grid(row=0, sticky=W)
-        Label(master, text='New Password:').grid(row=1, sticky=W)
-        Label(master, text='Enter New Password Again:').grid(row=2, sticky=W)
+        Label(master, text='請輸入舊密碼:').grid(row=0, sticky=W)
+        Label(master, text='請輸入新密碼:').grid(row=1, sticky=W)
+        Label(master, text='請再次輸入新密碼:').grid(row=2, sticky=W)
 
         self.oldpw = Entry(master, width=16, show='*')
         self.newpw1 = Entry(master, width=16, show='*')
