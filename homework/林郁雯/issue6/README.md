@@ -1,4 +1,4 @@
-## 這是第二次作業
+## HW(issue#6)
 
 作業內容:  
 [請將以下網址的json,儲存為aqi.json檔 #6 ](https://github.com/roberthsu2003/__11304_python_2024_tvdi__/issues/6)  

@@ -6,15 +6,15 @@ class Window(tk.Tk):
         super().__init__(**kwargs) #呼叫父類別
         #多做一些事
         self.title("pack1")  #參數
-        self.geometry("300x200")  #
+        self.geometry("300x100")  #視窗大小
 
-        ttk.Button(self,text="Top").pack()
+        ttk.Button(self,text="Left").pack(side="top")  
        
 
-        ttk.Button(self,text="Middle").pack()
+        ttk.Button(self,text="This is the Center Button").pack(side="left")
         
 
-        ttk.Button(self,text="Bottom").pack()
+        ttk.Button(self,text="Right").pack(side="right")
         
       
 if __name__ == '__main__':
