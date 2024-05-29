@@ -5,10 +5,10 @@
 
 ---
 
-## index5.py
+[## index5.py](./index5.py)
 ![index5.py](./images/pic2.png)
 
 ---
 
-## index6.py
+## [index6.py](./index6.py)
 ![index6.py](./images/pic3.png)
