@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## index.py
 ![index.py](./images/pic1.png)
 
