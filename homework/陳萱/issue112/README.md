@@ -2,7 +2,7 @@
 
 ## 作業內容：請建立3個以上的tkinter的layout的主檔
 
-## [index1.py](https://github.com/NoktoX/__11304_python_2024_tvdi__/blob/main/homework/%E9%99%B3%E8%90%B1/issue112/index1.py)
+### [index1.py](https://github.com/NoktoX/__11304_python_2024_tvdi__/blob/main/homework/%E9%99%B3%E8%90%B1/issue112/index1.py)
 ```python
 import tkinter as tk
 from tkinter import ttk
@@ -27,7 +27,7 @@ if __name__ == '__main__':
 ```
 ![index1.py](./image/pic1.png)
 
-## [index2.py](https://github.com/NoktoX/__11304_python_2024_tvdi__/blob/main/homework/%E9%99%B3%E8%90%B1/issue112/index2.py)
+### [index2.py](https://github.com/NoktoX/__11304_python_2024_tvdi__/blob/main/homework/%E9%99%B3%E8%90%B1/issue112/index2.py)
 ```python
 import tkinter as tk
 from tkinter import ttk
@@ -52,7 +52,7 @@ if __name__ == '__main__':
 ```
 ![index2.py](./image/pic2.png)
 
-## [index3.py](https://github.com/NoktoX/__11304_python_2024_tvdi__/blob/main/homework/%E9%99%B3%E8%90%B1/issue112/index3.py)
+### [index3.py](https://github.com/NoktoX/__11304_python_2024_tvdi__/blob/main/homework/%E9%99%B3%E8%90%B1/issue112/index3.py)
 ```python 
 import tkinter as tk
 from tkinter import ttk
