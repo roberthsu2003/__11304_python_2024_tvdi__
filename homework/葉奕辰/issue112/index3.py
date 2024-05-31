@@ -9,14 +9,27 @@ class Window(tk.Tk):
         self.title("window3")  #參數
         self.geometry("300x200")  #視窗大小
 
+<<<<<<< HEAD:homework/林郁雯/issue112/index3.py
+        ttk.Button(self,text="ABC").pack(side="top",fill="x") 
+       
+
+        ttk.Button(self,text="ABC").pack(fill='y', side='left')
+=======
         tk.Button(self,text="EAST").pack(side="right",padx=20) 
        
         tk.Button(self,text="SOUTH").pack(side="bottom",anchor='s',pady=20)
+>>>>>>> 278e4ac3dfddc9ac6df891b00621ad857414727f:homework/葉奕辰/issue112/index3.py
         
         tk.Button(self,text="WEST").pack(side="left",padx=20)
 
         tk.Button(self,text="NORTH").pack(side="top",pady=20)
 
+<<<<<<< HEAD:homework/林郁雯/issue112/index3.py
+        ttk.Button(self,text="ABC").pack(fill='y', side='right')
+        
+      
+=======
+>>>>>>> 278e4ac3dfddc9ac6df891b00621ad857414727f:homework/葉奕辰/issue112/index3.py
 if __name__ == '__main__':
     window:Window = Window()  
     window.mainloop() 
