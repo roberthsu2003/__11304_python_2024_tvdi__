@@ -11,7 +11,7 @@ class Window(tk.Tk):
 
         ttk.Button(self,text='This is the Center Button').pack(side='left')
 
-        ttk.Button(self,text='Right').pack(side='right')
+        ttk.Button(self,text='Right').pack(side='right') 
         
 
 if __name__ == '__main__':
