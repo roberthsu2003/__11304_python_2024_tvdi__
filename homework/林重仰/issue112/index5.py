@@ -9,7 +9,7 @@ class Window(tk.Tk):
 
         ttk.Button(self,text="Left").pack(side='left',expand=1,fill='both')
 
-        ttk.Button(self,text="Center").pack(side='left',expand=1,fill='both')
+        ttk.Button(self,text="Center.").pack(side='left',expand=1,fill='both')
 
         ttk.Button(self,text="Right").pack(side='left',expand=1,fill='both')
 
