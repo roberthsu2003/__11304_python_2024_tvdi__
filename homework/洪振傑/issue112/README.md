@@ -9,10 +9,10 @@
 
 ## index2.py
 [layout2_code](index2.py)
-
+![layout2_pic](../issue112/img/index2.png)
 ---
 
 ## index3.py
 [layout3_code](index3.py)
-
+![layout3_pic](../issue112/img/index3.png)
 ---

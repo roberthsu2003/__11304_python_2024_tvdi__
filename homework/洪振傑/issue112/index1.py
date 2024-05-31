@@ -18,7 +18,7 @@ class Window(tk.Tk):
 
         number_three=ttk.Button(self,text="2",command=self.SetNumber(2))
         number_three.pack(side="left")
-
+        #使用 command指令 呼叫 Calculate來做計算
         equal_button=ttk.Button(self,text="=",command=self.Calculate)
         equal_button.pack(side="right")
 
