@@ -8,13 +8,13 @@ class Window(tk.Tk):
         self.title("pack1")  #參數
         self.geometry("300x200")  #視窗大小
 
-        ttk.Button(self,text="Left").pack(side="top",fill="x") 
+        ttk.Button(self,text="ABC").pack(side="top",fill="x") 
        
 
-        ttk.Button(self,text="This is the Center Button").pack(fill='y', side='left')
+        ttk.Button(self,text="ABC").pack(fill='y', side='left')
         
 
-        ttk.Button(self,text="Right").pack(fill='y', side='left')
+        ttk.Button(self,text="ABC").pack(fill='y', side='right')
         
       
 if __name__ == '__main__':
