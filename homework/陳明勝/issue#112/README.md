@@ -8,5 +8,5 @@
 
 ---
 
-## grid3.py
+## grid3.py  
 ![grid3.py](./images/pic3-1.png) 
