@@ -9,6 +9,7 @@ class Site(BaseModel):
     aqi:int
     status:str
     pm25:float = Field(alias='pm2.5')
+    date:str = Field(alias='datacreationdate')
 
     @field_validator("pm25",mode='before')
     @classmethod
