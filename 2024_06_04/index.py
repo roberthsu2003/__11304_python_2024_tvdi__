@@ -18,6 +18,14 @@ class Window(ThemedTk):
         ttk.Label(title_frame,text='全台空氣品質指標(AQI)',style='Top.TLabel').pack(expand=True,fill='y')
         title_frame.pack(ipadx=100,ipady=30,padx=10,pady=10)
 
+        func_frame = ttk.Frame(self,style='Top.TFrame',borderwidth=1,relief='groove')
+        ttk.Button(func_frame,text="AQI品質最好的5個").pack(side='left',expand=True)
+        ttk.Button(func_frame,text="AQI品質最差的5個").pack(side='left',expand=True)
+        ttk.Button(func_frame,text="pm2.5品質最好的5個").pack(side='left',expand=True)
+        ttk.Button(func_frame,text="pm2.5品質最好的5個").pack(side='left',expand=True)
+        func_frame.pack(ipadx=100,ipady=30,padx=10,pady=10)
+
+
 
 def main():
     '''
