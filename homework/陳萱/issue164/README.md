@@ -1,6 +1,6 @@
 # issue164
 
-[issue164連結](./issue164.ipynb)
+[HW_issue164 連結](https://github.com/NoktoX/__11304_python_2024_tvdi__/blob/main/homework/%E9%99%B3%E8%90%B1/issue164/hw.ipynb)
 
 ## 讀檔
 ```python
