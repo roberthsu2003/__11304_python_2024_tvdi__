@@ -21,7 +21,7 @@ def main():
         data:list[dict] = tools.get_data(all_data)
         pprint(data)
     '''
-    window = Window(theme="blue")
+    window = Window(theme="arc")
     window.mainloop()
     
 
