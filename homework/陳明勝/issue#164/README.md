@@ -5,5 +5,5 @@
 ![data.json](https://github.com/roberthsu2003/__11304_python_2024_tvdi__/blob/main/homework/%E9%99%B3%E6%98%8E%E5%8B%9D/issue%23164/data.json) 
 
 ## ISSUE#164.ipynb file
-![ISSUE#164.ipynb](https) 
+![ISSUE#164.ipynb](https://github.com/roberthsu2003/__11304_python_2024_tvdi__/blob/main/homework/%E9%99%B3%E6%98%8E%E5%8B%9D/issue%23164/ISSUE%23164.ipynb) 
 
