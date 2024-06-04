@@ -27,7 +27,7 @@ class Window(tk.Tk):
         checktwo.deselect()
         checkthree = tk.Checkbutton(box2, text = "多元性", font = (13))
         checkthree.pack(side='left')
-        checktwo.deselect()
+        checkthree.deselect()
         box3 = ttk.Frame()
         box3.pack(fill = 'x', padx = 10, pady = 5)
         ttk.Label(box3, text="是否有養貓:", font = ("Arial",13, "bold")).pack(fill='x')
