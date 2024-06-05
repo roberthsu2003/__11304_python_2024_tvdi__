@@ -1,42 +1,51 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter.messagebox import showinfo
 
 class Window(tk.Tk):
     def __init__(self,**kwargs):
         super().__init__(**kwargs)
-        self.equation_str=""
+        self.title("計算機")
+        self.geometry("500x200")
+        self.var1 = tk.StringVar(value='')
+        self.varop = tk.StringVar(value='')
+        self.var2 = tk.StringVar(value='')
 
-        self.title("加法機")
-        self.label = ttk.Label(self, text="計算機")
-        self.label.pack(fill="both", expand=1, padx=100, pady=30)
 
-        number_one=ttk.Button(self,text="1",command=self.SetNumber(1))
-        number_one.pack(side="left")
+        ttk.Button(self,text="1",command=self.setvalue("1")).pack(side="left")
+        ttk.Button(self,text="+",command=self.setvalue("+")).pack(side="left")
+        ttk.Button(self,text="2",command=self.setvalue("2")).pack(side="left")
+        
+        ttk.Button(self,text="計算",command=self.calculate).pack(side="bottom")
 
-        number_two=ttk.Button(self,text="+",command=self.SetNumber("+"))
-        number_two.pack(side="left")
 
-        number_three=ttk.Button(self,text="2",command=self.SetNumber(2))
-        number_three.pack(side="left")
-        #使用 command指令 呼叫 Calculate來做計算
-        equal_button=ttk.Button(self,text="=",command=self.Calculate)
-        equal_button.pack(side="right")
+    def setvalue(self,value):
+        if value =="1":
+            self.var1.set("1")
+        elif value =="2":
+            self.var2.set("2")
+        elif value =="+":
+            self.varop.set("+")
 
-    def Calculate(self):
+
+    def getequation(self):
+        equation=f"{self.var1.get()}{self.varop.get()}{self.var2.get()}"
+        return equation
+
+    def calculate(self):
+
         try:
-            ans = eval(self.equation_str)
-            self.label.configure(text=ans)
-            self.equation_str = ""
+            ans = eval(self.getequation())
+            ttk.Label(text=f"答案= {ans}").pack(pady=10)
         except Exception as e:
-            self.label.configure(text="Error")
-            print("Error:", e)
-
-    def SetNumber(self,num):
-        self.equation_str+=str(num)
+            ttk.Label(text=e).pack()
 
 
-if __name__ == "__main__":
-    window = Window()
+
+    
+
+if __name__ =="__main__":
+    window=Window()
     window.mainloop()
 
 

@@ -4,8 +4,7 @@
 ## index1.py
 [layout1_code](index1.py)
 
-![layout1_pic1](../issue112/img/index1_1.png)
-![layout1_pic2](../issue112/img/index1_2.png)
+![layout1_pic](../issue112/img/index1.png)
 ---
 
 ## index2.py
