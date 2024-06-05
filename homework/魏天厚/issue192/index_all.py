@@ -1,6 +1,8 @@
 import requests
 from json import JSONDecodeError 
 from pprint import pprint
+from datetime import datetime
+import json
 
 def download_youbike_data():
     youbike_url = 'https://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.json'
@@ -22,6 +24,22 @@ def main():
     
     if youbike_data:
         print("台北市 YouBike 即時資料下載成功！")
+        
+        # 獲取當前日期時間
+        current_datetime = datetime.now()
+        
+        # 格式化日期時間為您想要的格式
+        datetime_str = current_datetime.strftime("%Y%m%d_%H%M%S")
+        
+        # 構建檔案名稱
+        filename = f"youbike_{datetime_str}.json"
+        
+        # 存儲 YouBike 資料至 JSON 檔案
+        with open(filename, 'w', encoding='utf-8') as file:
+            json.dump(youbike_data, file, ensure_ascii=False, indent=4)
+        
+        print(f"資料已儲存至 {filename}")
+        
         # 解析並顯示所需數據
         stations = youbike_data.get('retVal', {})
         for station_id, station_info in stations.items():
