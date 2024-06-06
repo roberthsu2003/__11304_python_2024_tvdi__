@@ -52,7 +52,12 @@ class Window(ThemedTk):
         data:list[dict] = tools.AQI.aqi_records
         sorted_data:list[dict] = sorted(data,key=lambda value:value['aqi'])
         best_aqi:list[dict] = sorted_data[:5]
-        print(best_aqi)
+        def abc(value:dict)->str:
+            return f"{value['county']} - {value['site_name']} - aqi:{value['aqi']} - 狀態:{value['status']} - {value['date']}"
+        message_data:list[str] = list(map(abc,best_aqi))
+        message = "\n".join(message_data)
+        print(message)
+        ShowInfo(parent=self,title="全台aqi最佳前5個區域")
               
             
     
