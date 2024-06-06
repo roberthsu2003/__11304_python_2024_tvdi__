@@ -52,7 +52,12 @@ class Window(ThemedTk):
         data:list[dict] = tools.AQI.aqi_records
         sorted_data:list[dict] = sorted(data,key=lambda value:value['aqi'])
         best_aqi:list[dict] = sorted_data[:5]
-        print(best_aqi)
+        def abc(value:dict)->str:
+            return f"{value['county']} - {value['site_name']} - aqi:{value['aqi']} - 狀態:{value['status']} - {value['date']}"
+        message_data:list[str] = list(map(abc,best_aqi))
+        message = "\n".join(message_data)
+        print(message)
+        ShowInfo(parent=self,title="全台aqi最佳前5個區域",message=message)
               
             
     
@@ -68,14 +73,15 @@ class Window(ThemedTk):
         ShowInfo(parent=self,title="這是Dialog")
 
 class ShowInfo(Dialog):
-    def __init__(self,parent:Misc,title:str|None = None):
-        super().__init__(parent=parent,title=title)
+    def __init__(self,parent:Misc,title:str|None = None,message:str=""):
+        self.message = message
+        super().__init__(parent=parent,title=title)        
 
     
     def body(self, master: Frame) -> Misc | None:
-        text = tk.Text(self,height=8,font=('Helvetica',25),width=40)
+        text = tk.Text(self,height=8,font=('Helvetica',15),width=40)
         text.pack(padx=10,pady=10)
-        text.insert(tk.INSERT,"測試的文字")
+        text.insert(tk.INSERT,self.message)
         text.config(state='disabled')
         return None
     
