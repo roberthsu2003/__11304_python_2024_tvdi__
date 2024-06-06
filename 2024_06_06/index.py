@@ -90,7 +90,7 @@ class ShowInfo(Dialog):
         自訂button
         '''
         box = tk.Frame(self)
-        self.ok_button = tk.Button(box, text="確定", width=10, command=self.ok, default=tk.ACTIVE)
+        self.ok_button = tk.Button(box, text="確定", width=10, command=self.ok)
         self.ok_button.pack(pady=(20,30),ipady=10)
         box.pack()
 
