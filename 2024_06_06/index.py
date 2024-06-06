@@ -25,7 +25,7 @@ class Window(ThemedTk):
         ttk.Button(func_frame,text="AQI品質最好的5個",command=self.click1).pack(side='left',expand=True)
         ttk.Button(func_frame,text="AQI品質最差的5個",command=self.click2).pack(side='left',expand=True)
         ttk.Button(func_frame,text="pm2.5品質最好的5個",command=self.click3).pack(side='left',expand=True)
-        ttk.Button(func_frame,text="pm2.5品質最好的5個",command=self.click4).pack(side='left',expand=True)
+        ttk.Button(func_frame,text="pm2.5品質最差的5個",command=self.click4).pack(side='left',expand=True)
         func_frame.pack(ipadx=100,ipady=30,padx=10,pady=10)
     
     def download_parse_data(self)->list[dict] | None:
@@ -63,23 +63,49 @@ class Window(ThemedTk):
     
     def click2(self):
         self.update_data()
+        data:list[dict] = tools.AQI.aqi_records
+        sorted_data:list[dict] = sorted(data,key=lambda value:value['aqi'],reverse=True)
+        best_aqi:list[dict] = sorted_data[:5]
+        def abc(value:dict)->str:
+            return f"{value['county']} - {value['site_name']} - aqi:{value['aqi']} - 狀態:{value['status']} - {value['date']}"
+        message_data:list[str] = list(map(abc,best_aqi))
+        message = "\n".join(message_data)
+        print(message)
+        ShowInfo(parent=self,title="全台aqi最差5個區域",message=message)
         
 
     def click3(self):
         self.update_data()
-        messagebox.showwarning("Warning","Warning message")
+        data:list[dict] = tools.AQI.aqi_records
+        sorted_data:list[dict] = sorted(data,key=lambda value:value['pm25'])
+        best_aqi:list[dict] = sorted_data[:5]
+        def abc(value:dict)->str:
+            return f"{value['county']} - {value['site_name']} - pm2.5:{value['pm25']} - 狀態:{value['status']} - {value['date']}"
+        message_data:list[str] = list(map(abc,best_aqi))
+        message = "\n".join(message_data)
+        print(message)
+        ShowInfo(parent=self,title="全台pm2.5最佳前5個區域",message=message)
     
     def click4(self):        
-        ShowInfo(parent=self,title="這是Dialog")
+        self.update_data()
+        data:list[dict] = tools.AQI.aqi_records
+        sorted_data:list[dict] = sorted(data,key=lambda value:value['pm25'],reverse=True)
+        best_aqi:list[dict] = sorted_data[:5]
+        def abc(value:dict)->str:
+            return f"{value['county']} - {value['site_name']} - pm2.5:{value['pm25']} - 狀態:{value['status']} - {value['date']}"
+        message_data:list[str] = list(map(abc,best_aqi))
+        message = "\n".join(message_data)
+        print(message)
+        ShowInfo(parent=self,title="全台pm2.5最差5個區域",message=message)
 
 class ShowInfo(Dialog):
     def __init__(self,parent:Misc,title:str|None = None,message:str=""):
-        self.message = message
-        super().__init__(parent=parent,title=title)        
+        self.message = message 
+        super().__init__(parent=parent,title=title) #最後才執行       
 
     
     def body(self, master: Frame) -> Misc | None:
-        text = tk.Text(self,height=8,font=('Helvetica',15),width=40)
+        text = tk.Text(self,height=8,font=('Helvetica',15),width=60)
         text.pack(padx=10,pady=10)
         text.insert(tk.INSERT,self.message)
         text.config(state='disabled')
