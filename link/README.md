@@ -68,6 +68,19 @@ https://youtube.com/live/827gmtpvbrA
 
 https://youtube.com/live/vRkr5T-RTWA
 
+---
+
+#### 2024_06_06_早上
+
+https://youtube.com/live/mekIGQQrCaI
+
+
+---
+
+#### 2024_06_06_下午
+
+https://youtube.com/live/pKpBB5909Jo
+
 
 
 
