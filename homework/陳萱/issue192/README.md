@@ -1,6 +1,6 @@
 ## 0604 作業 issue#192
 
-[HW_issue192 連結](./issue192.ipynb)
+[HW_issue192 連結](https://github.com/NoktoX/__11304_python_2024_tvdi__/blob/main/homework/%E9%99%B3%E8%90%B1/issue192/issue192.ipynb)
 
 ### 讀取檔案
 ```python
