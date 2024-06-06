@@ -26,8 +26,8 @@ class Window(ThemedTk):
         ttk.Button(func_frame,text="pm2.5品質最好的5個",command=self.click3).pack(side='left',expand=True)
         ttk.Button(func_frame,text="pm2.5品質最好的5個",command=self.click4).pack(side='left',expand=True)
         func_frame.pack(ipadx=100,ipady=30,padx=10,pady=10)
-
-    def click1(self):
+    
+    def download_parse_data(self)->list[dict] | None:
         try:
             all_data:dict[any] = tools.download_json()            
         except Exception as error:
@@ -35,7 +35,13 @@ class Window(ThemedTk):
             return
         else:        
             data:list[dict] = tools.get_data(all_data)
-            pprint(data)            
+            return data
+                  
+
+    def click1(self):
+        data:list[dict] = self.download_parse_data()
+        print(data)
+              
             
     
     def click2(self):
