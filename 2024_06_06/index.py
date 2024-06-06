@@ -57,7 +57,7 @@ class Window(ThemedTk):
         message_data:list[str] = list(map(abc,best_aqi))
         message = "\n".join(message_data)
         print(message)
-        ShowInfo(parent=self,title="全台aqi最佳前5個區域")
+        ShowInfo(parent=self,title="全台aqi最佳前5個區域",message=message)
               
             
     
@@ -73,14 +73,15 @@ class Window(ThemedTk):
         ShowInfo(parent=self,title="這是Dialog")
 
 class ShowInfo(Dialog):
-    def __init__(self,parent:Misc,title:str|None = None):
-        super().__init__(parent=parent,title=title)
+    def __init__(self,parent:Misc,title:str|None = None,message:str=""):
+        self.message = message
+        super().__init__(parent=parent,title=title)        
 
     
     def body(self, master: Frame) -> Misc | None:
-        text = tk.Text(self,height=8,font=('Helvetica',25),width=40)
+        text = tk.Text(self,height=8,font=('Helvetica',15),width=40)
         text.pack(padx=10,pady=10)
-        text.insert(tk.INSERT,"測試的文字")
+        text.insert(tk.INSERT,self.message)
         text.config(state='disabled')
         return None
     
