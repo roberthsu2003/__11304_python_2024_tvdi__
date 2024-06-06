@@ -131,9 +131,6 @@ class ShowInfo(Dialog):
         super().ok()
     
 
-    
-
-
 
 def main():
     window = Window(theme="arc")
