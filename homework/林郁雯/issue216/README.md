@@ -6,7 +6,7 @@
 
 ![過輕](./images/img-50.png)
 ![健康](./images/img-60.png)
-![過重](./images/img-70.png)
+![過重](./images/img-75.png)
 ![輕度肥胖](./images/img-80.png)
 ![中度肥胖](./images/img-100.png)
 ![重度肥](./images/img-110.png)
