@@ -82,8 +82,11 @@ class Window(ThemedTk):
                 weight_change = weight - ideal_weight
                 status_color = "red"
                 advice = f"您需要至少減少 {abs(weight_change):.2f} 公斤才能達到正常體重。"
-                
+
             CustomMessagebox(self,title="BMI",name=name,bmi=bmi,status=status,advice=advice)
+
+    def __repr__(self):
+        return "我是window的實體"
             
             
             
