@@ -47,4 +47,7 @@ class CustomMessagebox(Dialog):
 
     def apply(self):
         # 當用戶按下確定時處理數據
-        print(self.parent.entry_height)
+        self.parent.name_value.set('')
+        self.parent.hight_value.set('')
+        self.parent.hight_value.set('')
+        self.parent.weight_value.set('')
