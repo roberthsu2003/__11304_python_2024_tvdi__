@@ -85,13 +85,6 @@ class Window(ThemedTk):
             result_message = f"{name}您好:\n   bmi:{bmi:.2f}\n   體重:{status}\n   建議:{advice}"
             print(result_message)
             
-            
-
-        
-
-
-
-
 
 def main():
     window = Window(theme='arc')
