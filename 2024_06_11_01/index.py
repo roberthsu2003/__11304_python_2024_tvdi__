@@ -10,12 +10,16 @@ class Window(ThemedTk):
         #self.geometry("350x350+100+50")
         self.resizable(False,False)
         style = ttk.Style()
-        #print(style.theme_names())
+        style.configure('input.TFrame',background='#ffffff')
 
-        mainFrame = ttk.Frame(self)
+        titleFrame = ttk.Frame(self)
         title_label = ttk.Label(self, text="BMI計算器", font=("Arial", 20))
         title_label.pack(pady=10)
-        mainFrame.pack(padx=100,pady=50)
+        titleFrame.pack(padx=100,pady=50)
+
+        input_frame = ttk.Frame(self,width=100,height=100,style='input.TFrame')
+        input_frame.pack(pady=10)
+
 
 
 
