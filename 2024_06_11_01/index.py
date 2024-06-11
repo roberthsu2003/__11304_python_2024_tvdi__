@@ -52,8 +52,13 @@ class Window(ThemedTk):
             name:str = self.entry_name.get()
             height:int = int(self.entry_height.get())
             weight:int = int(self.entry_weight.get())
-        except Exception as error:
-            messagebox.showwarning("Warning","格式錯誤或欄位沒有填寫")
+        
+        #except UnboundLocalError:
+            #messagebox.showwarning("Warning","欄位沒有填寫")
+        except ValueError:
+            messagebox.showwarning("Warning","格式錯誤,欄位沒有填寫")
+        except Exception:
+            messagebox.showwarning("Warning","不知明的錯誤")
 
         print(name,height,weight)
 
