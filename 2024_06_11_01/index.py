@@ -25,21 +25,27 @@ class Window(ThemedTk):
         label_name = ttk.Label(input_frame, text="姓名:")
         label_name.grid(row=0, column=0, padx=5, pady=5,sticky=tk.E)
 
-        self.entry_name = ttk.Entry(input_frame)
-        self.entry_name.grid(row=0, column=1, padx=5, pady=5)
+        self.name_value = tk.StringVar()
+        self.name_value.set('')
+        entry_name = ttk.Entry(input_frame,textvariable=self.name_value)
+        entry_name.grid(row=0, column=1, padx=5, pady=5)
 
         # 身高體重
         label_height = ttk.Label(input_frame, text="身高 (cm):")
         label_height.grid(row=1, column=0, padx=5, pady=5,sticky=tk.E)
 
-        self.entry_height = ttk.Entry(input_frame)
-        self.entry_height.grid(row=1, column=1, padx=5, pady=5)
+        self.hight_value = tk.StringVar()
+        self.hight_value.set('')
+        entry_height = ttk.Entry(input_frame,textvariable=self.hight_value)
+        entry_height.grid(row=1, column=1, padx=5, pady=5)
 
         label_weight = ttk.Label(input_frame, text="體重 (kg):")
         label_weight.grid(row=2, column=0, padx=5, pady=5,sticky=tk.E)
 
-        self.entry_weight = ttk.Entry(input_frame)
-        self.entry_weight.grid(row=2, column=1, padx=5, pady=5)    
+        self.weight_value = tk.StringVar()
+        self.weight_value.set('')
+        entry_weight = ttk.Entry(input_frame,textvariable=self.weight_value)
+        entry_weight.grid(row=2, column=1, padx=5, pady=5)    
 
         input_frame.pack(pady=10,padx=30)
         #===================================
@@ -50,9 +56,9 @@ class Window(ThemedTk):
     
     def show_bmi_result(self):
         try:
-            name:str = self.entry_name.get()
-            height:int = int(self.entry_height.get())
-            weight:int = int(self.entry_weight.get())
+            name:str = self.name_value.get()
+            height:int = int(self.hight_value.get())
+            weight:int = int(self.weight_value.get())
         
         #except UnboundLocalError:
             #messagebox.showwarning("Warning","欄位沒有填寫")
