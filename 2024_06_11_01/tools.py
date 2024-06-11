@@ -5,6 +5,7 @@ import tkinter as tk
 
 class CustomMessagebox(Dialog):    
     def __init__(self, parent:Misc, title:str,name:str,bmi:float,status:str,advice:str):        
+        self.parent = parent
         self.name = name
         self.bmi = bmi
         self.status = status
@@ -43,3 +44,7 @@ class CustomMessagebox(Dialog):
         self.value_advice.grid(row=3, column=1, padx=5, pady=5)   
 
         contain_frame.pack(pady=10,padx=30)
+
+    def apply(self):
+        # 當用戶按下確定時處理數據
+        print(self.parent.entry_height)
