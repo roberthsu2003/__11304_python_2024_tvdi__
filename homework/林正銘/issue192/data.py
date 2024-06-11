@@ -8,7 +8,7 @@ def __download_json():
     try:
         res:Response = requests.get(url)
     except Exception:
-        raise ("連線失敗")
+        raise Exception("連線失敗")
     else:
         all_data:dict[any] = res.json()
         return all_data
@@ -31,11 +31,7 @@ class Youbike_Data(RootModel):
     root:list[Info]
 
 def load_data()->list[dict]:
-    try:
-        all_data:dict[any] = __download_json()
-    except Exception as error:
-        print(error)
-        
+    all_data:dict[any] = __download_json()
     youbike_data:Youbike_Data = Youbike_Data.model_validate(all_data)
     data = youbike_data.model_dump()
     return data
