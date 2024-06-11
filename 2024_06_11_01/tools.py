@@ -49,5 +49,19 @@ class CustomMessagebox(Dialog):
         # 當用戶按下確定時處理數據
         self.parent.name_value.set('')
         self.parent.hight_value.set('')
-        self.parent.hight_value.set('')
         self.parent.weight_value.set('')
+
+    def buttonbox(self):
+        # Add custom buttons (overriding the default buttonbox)
+        box = ttk.Frame(self)
+        self.ok_button = tk.Button(box, text="確定", width=10, command=self.ok, default=tk.ACTIVE)
+        self.ok_button.pack(side=tk.LEFT, padx=5, pady=5)
+        box.pack()
+
+    def ok(self):
+        # Override the ok method
+        print("OK button was clicked!")
+        super().ok()
+
+
+    
