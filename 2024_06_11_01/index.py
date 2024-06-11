@@ -59,8 +59,35 @@ class Window(ThemedTk):
             messagebox.showwarning("Warning","格式錯誤,欄位沒有填寫")
         except Exception:
             messagebox.showwarning("Warning","不知明的錯誤")
+        else:
+            self.show_result(name=name,height=height,weight=weight)
 
-        print(name,height,weight)
+
+    def show_result(self,name:str,height:int,weight:int):
+            bmi = weight / (height / 100) ** 2
+            if bmi < 18.5:
+                status = "體重過輕"
+                ideal_weight = 18.5 * (height / 100) ** 2
+                weight_change = ideal_weight - weight
+                status_color = "red"
+                advice = f"您需要至少增加 {abs(weight_change):.2f} 公斤才能達到正常體重。"
+            elif 18.5 <= bmi <= 24.9:
+                status = "正常"
+                status_color = "black"
+                advice = "您的體重正常，請保持！"
+            else:
+                status = "體重過重"
+                ideal_weight = 24.9 * (height / 100) ** 2
+                weight_change = weight - ideal_weight
+                status_color = "red"
+                advice = f"您需要至少減少 {abs(weight_change):.2f} 公斤才能達到正常體重。"
+            
+            result_message = f"{name}您好:\n   bmi:{bmi:.2f}\n   體重:{status}\n   建議:{advice}"
+            print(result_message)
+            
+            
+
+        
 
 
 
