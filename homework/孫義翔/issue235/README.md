@@ -1,7 +1,6 @@
 ## 請將下載的youbike及時資料,使用ttk.treeview顯示在視窗內 #235
 
-### [bmi.py](https://github.com/Ian092/Ian_window/blob/main/homework/issue216/bmi.py)
+### [bmi.py](https://github.com/Ian092/__11304_python_2024_tvdi__/blob/main/homework/%E5%AD%AB%E7%BE%A9%E7%BF%94/issue235/index.py)
 
-### [bmi.png](https://github.com/Ian092/Ian_window/blob/main/homework/issue216/BMI.png)
 
-![alt text](BMI.png)
+![image.png](image.png)
