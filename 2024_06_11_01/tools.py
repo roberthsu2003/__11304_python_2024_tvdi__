@@ -4,12 +4,14 @@ from tkinter import Misc
 import tkinter as tk
 
 class CustomMessagebox(Dialog):    
-    def __init__(self, parent:Misc, title:str,name:str,bmi:float,status:str,advice:str):        
+    def __init__(self, parent:Misc, title:str,name:str,bmi:float,status:str,advice:str,status_color:str):        
         self.parent = parent
         self.name = name
         self.bmi = bmi
         self.status = status
         self.advice = advice
+        style = ttk.Style()
+        style.configure('status.TLabel',foreground=status_color)
         super().__init__(parent=parent, title=title)
 
     def body(self, master):
@@ -33,7 +35,7 @@ class CustomMessagebox(Dialog):
         label_status = ttk.Label(contain_frame, text="狀態:")
         label_status.grid(row=2, column=0, padx=5, pady=5,sticky=tk.E)
 
-        self.value_status = ttk.Label(contain_frame,text=self.status)
+        self.value_status = ttk.Label(contain_frame,text=self.status,style='status.TLabel')
         self.value_status.grid(row=2, column=1, padx=5, pady=5)
 
         #advice
@@ -47,4 +49,21 @@ class CustomMessagebox(Dialog):
 
     def apply(self):
         # 當用戶按下確定時處理數據
-        print(self.parent.entry_height)
+        self.parent.name_value.set('')
+        self.parent.hight_value.set('')
+        self.parent.weight_value.set('')
+
+    def buttonbox(self):
+        # Add custom buttons (overriding the default buttonbox)
+        box = ttk.Frame(self)
+        self.ok_button = tk.Button(box, text="確定", width=10, command=self.ok, default=tk.ACTIVE)
+        self.ok_button.pack(side=tk.LEFT, padx=5, pady=5)
+        box.pack()
+
+    def ok(self):
+        # Override the ok method
+        print("OK button was clicked!")
+        super().ok()
+
+
+    
