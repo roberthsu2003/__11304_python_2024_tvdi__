@@ -65,11 +65,12 @@ class Window(ThemedTk):
 
     def item_selected(self,event):
         tree = event.widget
+        print(isinstance(tree,ttk.Treeview))
         for selected_item in tree.selection():
             item = tree.item(selected_item)
             record:list = item['values']
             print(record[0])
-            
+
 
 
 
