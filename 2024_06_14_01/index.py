@@ -14,6 +14,11 @@ class Window(ThemedTk):
         
         self._display_interface()
         
+    @property
+    def data(self)->list[dict]:
+        return self.__data
+    
+
     def _display_interface(self):
         mainFrame = ttk.Frame(borderwidth=1,relief='groove')
         ttk.Label(mainFrame,text="台北市YouBike2.0及時資料",font=('arial',25)).pack(pady=(20,10))
@@ -38,6 +43,9 @@ class Window(ThemedTk):
         tree.column('rent_bikes',width=50,anchor=tk.CENTER)
         tree.column('retuen_bikes',width=50,anchor=tk.CENTER)
 
+        # bind使用者的事件
+        tree.bind('<<TreeviewSelect>>', self.item_selected)
+
 
         
         
@@ -55,11 +63,14 @@ class Window(ThemedTk):
         #======================================
         mainFrame.pack(expand=True,fill=tk.BOTH,padx=10,pady=10)
 
+    def item_selected(self,event):
+        print(event)
 
 
-    @property
-    def data(self)->list[dict]:
-        return self.__data
+
+    
+    
+
 
 
 def main():
