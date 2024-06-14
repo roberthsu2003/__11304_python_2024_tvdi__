@@ -64,7 +64,13 @@ class Window(ThemedTk):
         mainFrame.pack(expand=True,fill=tk.BOTH,padx=10,pady=10)
 
     def item_selected(self,event):
-        print(event)
+        tree = event.widget
+        for selected_item in tree.selection():
+            item = tree.item(selected_item)
+            record:list = item['values']
+            print(record[0])
+            
+
 
 
 
