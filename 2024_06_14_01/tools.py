@@ -7,7 +7,7 @@ import tkintermapview as tkmap
 
 class CustomMessagebox(Dialog):    
     def __init__(self, parent:Misc, title:str,site:Info):        
-        print(site)
+        self.site:Info = site
         super().__init__(parent=parent, title=title)
 
     def body(self, master):
@@ -21,6 +21,8 @@ class CustomMessagebox(Dialog):
                                          corner_radius=0
                                          )
         map_widget.pack()
+        map_widget.set_position(self.site.lat, self.site.lng) #台北市位置
+        map_widget.set_zoom(20) #設定顯示大小
         map_frame.pack(expand=True,fill='both')
         #===================
         contain_frame.pack(expand=True,fill='both',pady=10,padx=30)
