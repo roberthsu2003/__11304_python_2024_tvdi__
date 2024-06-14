@@ -6,6 +6,7 @@ import data
 class Window(ThemedTk):
     def __init__(self,theme:str='arc',**kwargs):
         super().__init__(theme=theme,**kwargs)
+        self.title('台北市YouBike2.0及時資料')
         try:
             self.__data = data.load_data()
         except Exception as e:
@@ -14,8 +15,11 @@ class Window(ThemedTk):
         self._display_interface()
         
     def _display_interface(self):
-        mainFrame = ttk.Frame(width=500,height=800)
-        mainFrame.pack(expand=True,fill=tk.BOTH)
+        mainFrame = ttk.Frame(borderwidth=1,relief='groove')
+        ttk.Label(mainFrame,text="台北市YouBike2.0及時資料",font=('arial',25)).pack()
+        tableFrame = ttk.Frame(mainFrame)
+        tableFrame.pack(expand=True,fill=tk.BOTH)
+        mainFrame.pack(expand=True,fill=tk.BOTH,padx=10,pady=10)
 
 
 
