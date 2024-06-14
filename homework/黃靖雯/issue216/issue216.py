@@ -17,10 +17,14 @@ def get_bmi():
             category = "OVERWEIGHT"
         else:
             category = "TOO FAT"
-
-        message = (f"Hey {name}!\nYour BMI is: {bmi:.1f} ({category})\n"
-                   f"Your ideal weight is: {((height/100)**2)*22:.1f} kg")
         
+        ideal_weight_low = 18.5 * (height_m * height_m)
+        ideal_weight_high = 24.9 * (height_m * height_m)
+
+        message = (f"{name}，your BMI: {bmi:.1f} ({category})\n"
+                   f"Your ideal weight is:  {(ideal_weight_low + ideal_weight_high)/2:.1f} kg")
+
+
         messagebox.showinfo("BMI Result", message)
     except ValueError:
         messagebox.showerror("Invalid answer. Please try again!")
