@@ -3,7 +3,7 @@ from requests import Response
 from pydantic import BaseModel, RootModel, Field
 
 def __download_json():
-    url = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"
+    url = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/_immediate.json"
 
     try:
         res:Response = requests.get(url)
