@@ -45,12 +45,18 @@ def load_data()->list[dict]:
 
 class FilterData(object):
     @staticmethod
-    def get_selected_coordinate(sna:str,data:list[dict]) -> dict:
-        def abc(item:dict)->bool:
-            if item['sna'] == sna:
-                return True
-            else:
-                return False
-            
-        right_list:list[dict] = list(filter(abc,data))
-        return right_list[0]
+    def get_selected_coordinate(sna:str,data:list[dict]) -> Info:    
+        right_list:list[dict] = list(filter(lambda item:True if item['sna']==sna else False ,data))
+        data:dict = right_list[0]
+        return Info(sna=data['sna'],
+                    sarea=data['sarea'],
+                    mday=data['mday'],
+                    ar=data['ar'],
+                    act=data['act'],
+                    updateTime=data['updateTime'],
+                    total=data['total'],
+                    available_rent_bikes=data['rent_bikes'],
+                    available_return_bikes=data['retuen_bikes'],
+                    latitude=data['lat'],
+                    longitude=data['lng']
+                    )

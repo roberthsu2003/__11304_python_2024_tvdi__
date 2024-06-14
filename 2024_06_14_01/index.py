@@ -2,7 +2,7 @@ from ttkthemes import ThemedTk
 import tkinter as tk
 from tkinter import ttk, messagebox
 import data
-from data import FilterData
+from data import FilterData,Info
 
 
 
@@ -72,7 +72,7 @@ class Window(ThemedTk):
         for selected_item in tree.selection():
             item = tree.item(selected_item)
             record:list = item['values']
-            site_data:dict = FilterData.get_selected_coordinate(sna=record[0],data=self.data)
+            site_data:Info = FilterData.get_selected_coordinate(sna=record[0],data=self.data)
             print(site_data)
             
 
