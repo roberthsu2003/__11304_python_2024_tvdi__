@@ -21,7 +21,8 @@ class CustomMessagebox(Dialog):
                                          corner_radius=0
                                          )
         map_widget.pack()
-        map_widget.set_position(self.site.lat, self.site.lng) #台北市位置
+        marker = map_widget.set_position(self.site.lat, self.site.lng,marker=True) #台北市位置
+        marker.set_text(f'{self.site.sarea}\n{self.site.sna}')
         map_widget.set_zoom(20) #設定顯示大小
         map_frame.pack(expand=True,fill='both')
         #===================
