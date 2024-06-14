@@ -53,7 +53,7 @@ def main():
         # 創建Tkinter視窗
         root = Tk()
         root.title("台北市 士林區 UBike 即時資料")
-        root.geometry('500x620')
+        root.geometry('620x320')
         
         # 創建Treeview
         tree = ttk.Treeview(root, columns=(
