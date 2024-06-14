@@ -1,6 +1,6 @@
 import requests
 from requests import Response
-from pydantic import BaseModel, RootModel, Field
+from pydantic import BaseModel, RootModel, Field,field_validator
 
 def __download_json():
     url = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"
@@ -26,6 +26,11 @@ class Info(BaseModel):
     lat:float = Field(alias="latitude")
     lng:float = Field(alias="longitude")
     retuen_bikes:int = Field(alias="available_return_bikes")
+
+    @field_validator("sna",mode='before')
+    @classmethod
+    def flex_string(cls, value:str)->str:
+        return value.split(sep="_")[-1]
 
 class Youbike_Data(RootModel):
     root:list[Info]
