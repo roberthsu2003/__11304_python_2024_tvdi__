@@ -45,7 +45,12 @@ def load_data()->list[dict]:
 
 class FilterData(object):
     @staticmethod
-    def get_selected_site(sna:str,data:list[dict]) -> tuple[float]:
-        print(sna)
-        #print(data)
-        return (0,0) 
+    def get_selected_coordinate(sna:str,data:list[dict]) -> dict:
+        def abc(item:dict)->bool:
+            if item['sna'] == sna:
+                return True
+            else:
+                return False
+            
+        right_list:list[dict] = list(filter(abc,data))
+        return right_list[0]

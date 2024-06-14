@@ -72,9 +72,9 @@ class Window(ThemedTk):
         for selected_item in tree.selection():
             item = tree.item(selected_item)
             record:list = item['values']
-            a,b = FilterData.get_selected_site(sna=record[0],data=self.data)
-            print(a)
-            print(b)
+            site_data:dict = FilterData.get_selected_coordinate(sna=record[0],data=self.data)
+            print(site_data)
+            
 
 
 
