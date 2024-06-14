@@ -30,6 +30,15 @@ class Window(ThemedTk):
         tree.heading('rent_bikes', text='可借')
         tree.heading('retuen_bikes', text='可還')
 
+        # 定義欄位寬度
+        tree.column('sarea',width=70,anchor=tk.CENTER)
+        tree.column('mday',width=120,anchor=tk.CENTER)
+        tree.column('ar',minwidth=100)
+        tree.column('total',width=50,anchor=tk.CENTER)
+        tree.column('rent_bikes',width=50,anchor=tk.CENTER)
+        tree.column('retuen_bikes',width=50,anchor=tk.CENTER)
+
+
         
         
         # add data to the treeview
