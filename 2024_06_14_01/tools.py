@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkinter import Misc
 import tkinter as tk
 from data import Info
+import tkintermapview as tkmap
 
 class CustomMessagebox(Dialog):    
     def __init__(self, parent:Misc, title:str,site:Info):        
@@ -11,9 +12,18 @@ class CustomMessagebox(Dialog):
 
     def body(self, master):
         # 創建對話框主體。返回應具有初始焦點的控件。
-        contain_frame = ttk.Frame(master,style='Input.TFrame')         
-
-        contain_frame.pack(pady=10,padx=30)
+        contain_frame = ttk.Frame(master)
+        #====================    
+        map_frame = ttk.Frame(contain_frame)
+        map_widget = tkmap.TkinterMapView(map_frame,
+                                         width=800,
+                                         height=600,
+                                         corner_radius=0
+                                         )
+        map_widget.pack()
+        map_frame.pack(expand=True,fill='both')
+        #===================
+        contain_frame.pack(expand=True,fill='both',pady=10,padx=30)
 
     def apply(self):
         # 當用戶按下確定時處理數據
