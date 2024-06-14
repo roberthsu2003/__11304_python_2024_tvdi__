@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkinter import Misc
 import tkinter as tk
 from data import Info
+import tkintermapview as tkmap
 
 class CustomMessagebox(Dialog):    
     def __init__(self, parent:Misc, title:str,site:Info):        
