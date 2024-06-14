@@ -22,7 +22,7 @@ class CustomMessagebox(Dialog):
                                          )
         map_widget.pack()
         marker = map_widget.set_position(self.site.lat, self.site.lng,marker=True) #台北市位置
-        marker.set_text(f'{self.site.sarea}\n{self.site.sna}')
+        marker.set_text(f'{self.site.sarea}\n{self.site.sna}\n總車輛:{self.site.total}\n可借:{self.site.rent_bikes}\n可還:{self.site.retuen_bikes}')
         map_widget.set_zoom(20) #設定顯示大小
         map_frame.pack(expand=True,fill='both')
         #===================
