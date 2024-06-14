@@ -2,11 +2,9 @@ from ttkthemes import ThemedTk
 import tkinter as tk
 from tkinter import ttk, messagebox
 import data
+from data import FilterData
 
-def get_selected_site(sna:str,data:list[dict]) -> tuple[float]:
-    print(sna)
-    #print(data)
-    return (0,0)
+
 
 class Window(ThemedTk):
     def __init__(self,theme:str='arc',**kwargs):
@@ -74,7 +72,7 @@ class Window(ThemedTk):
         for selected_item in tree.selection():
             item = tree.item(selected_item)
             record:list = item['values']
-            a,b = get_selected_site(sna=record[0],data=self.data)
+            a,b = FilterData.get_selected_site(sna=record[0],data=self.data)
             print(a)
             print(b)
 
