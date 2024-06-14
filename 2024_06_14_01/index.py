@@ -16,7 +16,7 @@ class Window(ThemedTk):
         
     def _display_interface(self):
         mainFrame = ttk.Frame(borderwidth=1,relief='groove')
-        ttk.Label(mainFrame,text="台北市YouBike2.0及時資料",font=('arial',25)).pack()
+        ttk.Label(mainFrame,text="台北市YouBike2.0及時資料",font=('arial',25)).pack(pady=(20,10))
         #=================================
         tableFrame = ttk.Frame(mainFrame)
         columns = ('sna', 'sarea', 'mday','ar','total','rent_bikes','retuen_bikes')
@@ -51,7 +51,7 @@ class Window(ThemedTk):
         scrollbar = ttk.Scrollbar(tableFrame, orient=tk.VERTICAL, command=tree.yview)
         tree.configure(yscroll=scrollbar.set)
         scrollbar.grid(row=0, column=1, sticky='ns')
-        tableFrame.pack(expand=True,fill=tk.BOTH)
+        tableFrame.pack(expand=True,fill=tk.BOTH,padx=20,pady=20)
         #======================================
         mainFrame.pack(expand=True,fill=tk.BOTH,padx=10,pady=10)
 
