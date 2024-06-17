@@ -157,9 +157,11 @@ class PieChartFrame(ttk.Frame):
             canvas.draw()
             canvas.get_tk_widget().grid(row=7,column=0,columnspan=2)
 
-            #顯示後馬上消滅canvas
+            #顯示後馬上消滅canvas,可以不會佔記憶體
             for item in canvas.get_tk_widget().find_all():
                 canvas.get_tk_widget().delete(item)
+            #顯示後馬上消滅figure,可以不會佔記憶體
+            plt.close()
             
 
             oneFrame.pack(side='left',expand=True,fill='both') 
