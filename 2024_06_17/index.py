@@ -146,10 +146,14 @@ class PieChartFrame(ttk.Frame):
             axes = figure.add_subplot()
             axes.pie(values,colors=colors,
                     labels=labels,
-                    labeldistance=0.4,
+                    labeldistance=1.2,
                     shadow=True,
                     autopct=lambda pct: func(pct, values),
                     textprops=dict(color="white"))
+            
+            axes.legend(title="rate:",
+                        loc="center left",
+                        bbox_to_anchor=(0, 0, 0, 2))
             
             canvas = FigureCanvasTkAgg(figure,oneFrame)
             canvas.draw()
