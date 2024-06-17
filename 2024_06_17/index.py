@@ -90,7 +90,10 @@ class PieChartFrame(ttk.Frame):
         self.configure({'borderwidth':2,'relief':'groove'})
         #self.config({'borderwidth':2,'relief':'groove'})        
         #self['borderwidth'] = 2
-        #self['relief'] = 'groove'      
+        #self['relief'] = 'groove'
+        style = ttk.Style()
+        style.configure('abc.TFrame',background='#ffffff')
+        self.configure(style='abc.TFrame')     
 
     @property
     def infos(self)->None:
@@ -110,7 +113,7 @@ class PieChartFrame(ttk.Frame):
             total:int = data[4]
             rents:int = data[5]
             returns:int = data[6]
-            oneFrame = ttk.Frame(self)
+            oneFrame = ttk.Frame(self,style='abc.TFrame')
             ttk.Label(oneFrame,text="行政區:").grid(row=0,column=0,sticky='e')
             ttk.Label(oneFrame,text=area).grid(row=0,column=1,sticky='w')
 
@@ -171,11 +174,13 @@ def main():
     def on_closing():
         print("手動關閉視窗")
         window.destroy()
+        window.quit()
 
     
     window = Window(theme='breeze')
-    window.protocol("WM_DELETE_WINDOW", on_closing)
+    window.protocol("WM_DELETE_WINDOW", on_closing)    
     window.mainloop()
+    
 
 if __name__ == '__main__':
     main()
