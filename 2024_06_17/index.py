@@ -108,26 +108,26 @@ class PieChartFrame(ttk.Frame):
             rents:int = data[5]
             returns:int = data[6]
             oneFrame = ttk.Frame(self)
-            ttk.Label(oneFrame,text="行政區").grid(row=0,column=0)
-            ttk.Label(oneFrame,text=area).grid(row=0,column=1)
+            ttk.Label(oneFrame,text="行政區:").grid(row=0,column=0,sticky='e')
+            ttk.Label(oneFrame,text=area).grid(row=0,column=1,sticky='w')
 
-            ttk.Label(oneFrame,text="站點名稱").grid(row=1,column=0)
-            ttk.Label(oneFrame,text="sitename").grid(row=1,column=1)
+            ttk.Label(oneFrame,text="站點名稱:").grid(row=1,column=0,sticky='e')
+            ttk.Label(oneFrame,text=sitename).grid(row=1,column=1,sticky='w')
 
-            ttk.Label(oneFrame,text="時間").grid(row=2,column=0)
-            ttk.Label(oneFrame,text=info_time).grid(row=2,column=1)
+            ttk.Label(oneFrame,text="時間:").grid(row=2,column=0,sticky='e')
+            ttk.Label(oneFrame,text=info_time).grid(row=2,column=1,sticky='w')
 
-            ttk.Label(oneFrame,text="地址").grid(row=3,column=0)
-            ttk.Label(oneFrame,text=address).grid(row=3,column=1)
+            ttk.Label(oneFrame,text="地址:").grid(row=3,column=0,sticky='e')
+            ttk.Label(oneFrame,text=address).grid(row=3,column=1,sticky='w')
 
-            ttk.Label(oneFrame,text="總車輛數").grid(row=4,column=0)
-            ttk.Label(oneFrame,text=str(total)).grid(row=4,column=1)
+            ttk.Label(oneFrame,text="總車輛數:").grid(row=4,column=0,sticky='e')
+            ttk.Label(oneFrame,text=str(total)).grid(row=4,column=1,sticky='w')
 
-            ttk.Label(oneFrame,text="可借").grid(row=5,column=0)
-            ttk.Label(oneFrame,text=str(rents)).grid(row=5,column=1)
+            ttk.Label(oneFrame,text="可借:").grid(row=5,column=0,sticky='e')
+            ttk.Label(oneFrame,text=str(rents)).grid(row=5,column=1,sticky='w')
 
-            ttk.Label(oneFrame,text="可還").grid(row=5,column=0)
-            ttk.Label(oneFrame,text=str(returns)).grid(row=5,column=1)
+            ttk.Label(oneFrame,text="可還:").grid(row=5,column=0,sticky='e')
+            ttk.Label(oneFrame,text=str(returns)).grid(row=5,column=1,sticky='w')
 
             oneFrame.pack(side='left',expand=True,fill='both')  
         
