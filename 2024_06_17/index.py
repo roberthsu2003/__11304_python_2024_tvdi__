@@ -77,9 +77,7 @@ class Window(ThemedTk):
             record:list = item['values']
             records.append(record)
         self.pieChartFrame.infos = records
-        
-        
-            
+                    
 
 import matplotlib.pyplot as plt
 import numpy as np
