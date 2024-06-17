@@ -63,11 +63,11 @@ class Window(ThemedTk):
         scrollbar = ttk.Scrollbar(tableFrame, orient=tk.VERTICAL, command=tree.yview)
         tree.configure(yscroll=scrollbar.set)
         scrollbar.grid(row=0, column=1, sticky='ns')
-        tableFrame.pack(expand=True,fill=tk.BOTH,padx=20,pady=20)
+        tableFrame.pack(padx=20,pady=20)
         #======================================
         self.pieChartFrame = PieChartFrame(mainFrame)
-        self.pieChartFrame.pack(expand=True,fill='both')
-        mainFrame.pack(expand=True,fill=tk.BOTH,padx=10,pady=10)
+        self.pieChartFrame.pack()
+        mainFrame.pack(padx=10,pady=10)
 
     def item_selected(self,event):
         tree = event.widget
