@@ -18,13 +18,29 @@ class Example(ttk.Frame):
         canvas.pack(expand=True,fill='both')      
         self.pack(expand=True,fill='both')
 
+class Example1(ttk.Frame):
+    def __init__(self,master:Misc,**kwargs):
+        super().__init__(master=master,**kwargs)
+        master.title('Colors')
+        self.configure({'borderwidth':2,'relief':'groove'})
+        #self.config({'borderwidth':2,'relief':'groove'})        
+        #self['borderwidth'] = 2
+        #self['relief'] = 'groove' 
+        canvas = tk.Canvas(self)
+        canvas.create_rectangle(30,10,120,80,outline='#000',fill='#fb0')
+        canvas.create_text(40, 40, text='中文測試', anchor='nw', fill='#0a0', font=('Arial', 18, 'bold','italic'))
+        canvas.create_oval(150,10,200,60,outline='#000',fill='#1f1',width=2)
+            
+        canvas.pack(expand=True,fill='both')      
+        self.pack(expand=True,fill='both')
+
 
 
 def main():
     window = tk.Tk()
     
-    Example(window)
-    window.geometry("400x250")
+    Example1(window)
+    window.geometry("400x100")
     window.mainloop()
 
 if __name__ == "__main__":
