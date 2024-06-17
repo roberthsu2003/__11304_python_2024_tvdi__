@@ -37,14 +37,28 @@ class Example1(ttk.Frame):
             
         canvas.pack(expand=True,fill='both')      
         self.pack(expand=True,fill='both')
+    
+class Example2(ttk.Frame):
+    def __init__(self,master:Misc,**kwargs):
+        super().__init__(master=master,**kwargs)
+        master.title('Colors')
+        self.configure(borderwidth=2,relief='groove')
+        #self.configure({'borderwidth':2,'relief':'groove'})
+        #self.config({'borderwidth':2,'relief':'groove'})        
+        #self['borderwidth'] = 2
+        #self['relief'] = 'groove' 
+        
+            
+              
+        self.pack(expand=True,fill='both')
 
 
 
 def main():
     window = tk.Tk()
     
-    Example1(window)
-    window.geometry("400x100")
+    Example2(window)
+    window.geometry("400x400")
     window.mainloop()
 
 if __name__ == "__main__":
