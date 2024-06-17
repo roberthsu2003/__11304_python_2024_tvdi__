@@ -6,12 +6,19 @@ from tkinter import Misc
 class Example(ttk.Frame):
     def __init__(self,master:Misc,**kwargs):
         super().__init__(master=master,**kwargs)
+        master.title('Lines')
+        self.configure({'borderwidth':2,'relief':'groove'})
+        #self.config({'borderwidth':2,'relief':'groove'})        
+        #self['borderwidth'] = 2
+        #self['relief'] = 'groove'       
+        self.pack(expand=True,fill='both')
 
 
 
 def main():
     window = tk.Tk()
-    window.title("Frame的繼承")
+    
+    Example(window)
     window.geometry("400x250")
     window.mainloop()
 
