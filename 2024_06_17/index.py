@@ -29,7 +29,7 @@ class Window(ThemedTk):
         #=================================
         tableFrame = ttk.Frame(mainFrame)
         columns = ('sna', 'sarea', 'mday','ar','total','rent_bikes','retuen_bikes')
-        tree = ttk.Treeview(tableFrame, columns=columns, show='headings',selectmode='browse')
+        tree = ttk.Treeview(tableFrame, columns=columns, show='headings')
         # define headings
         tree.heading('sna', text='站點')
         tree.heading('sarea', text='行政區')
@@ -65,16 +65,20 @@ class Window(ThemedTk):
         scrollbar.grid(row=0, column=1, sticky='ns')
         tableFrame.pack(expand=True,fill=tk.BOTH,padx=20,pady=20)
         #======================================
-        pieChartFrame = PieChartFrame(mainFrame)
-        pieChartFrame.pack(expand=True,fill='both')
+        self.pieChartFrame = PieChartFrame(mainFrame)
+        self.pieChartFrame.pack(expand=True,fill='both')
         mainFrame.pack(expand=True,fill=tk.BOTH,padx=10,pady=10)
 
     def item_selected(self,event):
         tree = event.widget
+        records:list[list] = []       
         for selected_item in tree.selection():
-            item = tree.item(selected_item)
+            item = tree.item(selected_item)            
             record:list = item['values']
-            print(record)
+            records.append(record)
+        self.pieChartFrame.infos = records
+        
+        
             
 
 
@@ -89,7 +93,16 @@ class PieChartFrame(ttk.Frame):
         canvas.create_line(15, 30, 200,30)
         canvas.create_line(300,35, 300, 200,dash=(8,2))
         canvas.create_line(55,85,155,85,105,180,55,85)
-        canvas.pack(expand=True,fill='both')  
+        canvas.pack(expand=True,fill='both')
+
+    @property
+    def infos(self)->None:
+        return None
+
+    @infos.setter
+    def infos(self,data:list[list]) -> None:
+        print('資料傳進來了')
+        print(data)
         
 
 
