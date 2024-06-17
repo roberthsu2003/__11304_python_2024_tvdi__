@@ -37,8 +37,11 @@ class Example1(ttk.Frame):
             
         canvas.pack(expand=True,fill='both')      
         self.pack(expand=True,fill='both')
-    
-class Example2(ttk.Frame):
+
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg   
+class Example2(ttk.Frame): 
+
     def __init__(self,master:Misc,**kwargs):
         super().__init__(master=master,**kwargs)
         master.title('Colors')
@@ -47,8 +50,16 @@ class Example2(ttk.Frame):
         #self.config({'borderwidth':2,'relief':'groove'})        
         #self['borderwidth'] = 2
         #self['relief'] = 'groove' 
-        
-            
+        figure = plt.figure(figsize=(5,4),dpi=30)
+        axes = figure.add_subplot()
+        axes.plot([1,2,3,4,5],[2, 3, 5, 7, 11])
+        axes.set_title("Sample Char")
+        axes.set_xlabel("X-axis")
+        axes.set_ylabel("Y-axis")
+
+        canvas = FigureCanvasTkAgg(figure,self)
+        canvas.draw()
+        canvas.get_tk_widget().pack(expand=True,fill='both',padx=30,pady=30)         
               
         self.pack(expand=True,fill='both')
 
@@ -58,7 +69,7 @@ def main():
     window = tk.Tk()
     
     Example2(window)
-    window.geometry("400x400")
+    window.geometry("600x500")
     window.mainloop()
 
 if __name__ == "__main__":
