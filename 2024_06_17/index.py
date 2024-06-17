@@ -90,7 +90,7 @@ class PieChartFrame(ttk.Frame):
         self.configure({'borderwidth':2,'relief':'groove'})
         #self.config({'borderwidth':2,'relief':'groove'})        
         #self['borderwidth'] = 2
-        #self['relief'] = 'groove'         
+        #self['relief'] = 'groove'      
 
     @property
     def infos(self)->None:
@@ -100,7 +100,7 @@ class PieChartFrame(ttk.Frame):
     @infos.setter
     def infos(self,datas:list[list]) -> None:
         for w in self.winfo_children():
-            w.destroy()
+            w.destroy()        
 
         for data in datas:
             sitename:str = data[0]
@@ -129,8 +129,8 @@ class PieChartFrame(ttk.Frame):
             ttk.Label(oneFrame,text="可借:").grid(row=5,column=0,sticky='e')
             ttk.Label(oneFrame,text=str(rents)).grid(row=5,column=1,sticky='w')
 
-            ttk.Label(oneFrame,text="可還:").grid(row=5,column=0,sticky='e')
-            ttk.Label(oneFrame,text=str(returns)).grid(row=5,column=1,sticky='w')
+            ttk.Label(oneFrame,text="可還:").grid(row=6,column=0,sticky='e')
+            ttk.Label(oneFrame,text=str(returns)).grid(row=6,column=1,sticky='w')
 
             def func(pct, allvals):
                 absolute = int(np.round(pct/100.*np.sum(allvals)))
@@ -150,7 +150,12 @@ class PieChartFrame(ttk.Frame):
             
             canvas = FigureCanvasTkAgg(figure,oneFrame)
             canvas.draw()
-            canvas.get_tk_widget().grid(row=6,column=0,columnspan=2)
+            canvas.get_tk_widget().grid(row=7,column=0,columnspan=2)
+
+            #顯示後馬上消滅canvas
+            for item in canvas.get_tk_widget().find_all():
+                canvas.get_tk_widget().delete(item)
+            
 
             oneFrame.pack(side='left',expand=True,fill='both') 
         
