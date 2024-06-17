@@ -166,8 +166,14 @@ class PieChartFrame(ttk.Frame):
 
 
 
+
 def main():
+    def on_closing():
+        print("手動關閉視窗")
+        window.destroy()
+    
     window = Window(theme='breeze')
+    window.protocol("WM_DELETE_WINDOW", on_closing)
     window.mainloop()
 
 if __name__ == '__main__':
