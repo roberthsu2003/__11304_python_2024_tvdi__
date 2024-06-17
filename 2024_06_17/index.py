@@ -72,7 +72,7 @@ class Window(ThemedTk):
     def item_selected(self,event):
         tree = event.widget
         records:list[list] = []       
-        for selected_item in tree.selection():
+        for selected_item in tree.selection()[:3]: #[:3]代表只可以選取3個,多了也不會選取
             item = tree.item(selected_item)            
             record:list = item['values']
             records.append(record)
