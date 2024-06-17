@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import Misc
+from PIL import Image,ImageTk
 
 
 class Example(ttk.Frame):
@@ -30,6 +31,9 @@ class Example1(ttk.Frame):
         canvas.create_rectangle(30,10,120,80,outline='#000',fill='#fb0')
         canvas.create_text(40, 40, text='中文測試', anchor='nw', fill='#0a0', font=('Arial', 18, 'bold','italic'))
         canvas.create_oval(150,10,200,60,outline='#000',fill='#1f1',width=2)
+        self.img = Image.open('tvdi.png')
+        self.tvdi = ImageTk.PhotoImage(self.img)
+        canvas.create_image(210,10,anchor='nw', image=self.tvdi)
             
         canvas.pack(expand=True,fill='both')      
         self.pack(expand=True,fill='both')
