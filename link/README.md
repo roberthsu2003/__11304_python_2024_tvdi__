@@ -68,6 +68,43 @@ https://youtube.com/live/827gmtpvbrA
 
 https://youtube.com/live/vRkr5T-RTWA
 
+---
+
+#### 2024_06_06_早上
+
+https://youtube.com/live/mekIGQQrCaI
+
+
+---
+
+#### 2024_06_06_下午
+
+https://youtube.com/live/pKpBB5909Jo
+
+
+#### 2024_06_11_早上
+
+https://youtube.com/live/1C5p28qncXc
+
+
+---
+
+#### 2024_06_11_下午
+
+https://youtube.com/live/I-mQk_N_KCE
+
+
+#### 2024_06_14_早上
+
+https://youtube.com/live/65_HnEMwwwA
+
+
+---
+
+#### 2024_06_14_下午
+
+https://youtube.com/live/aayDV7POSns
+
 
 
 
