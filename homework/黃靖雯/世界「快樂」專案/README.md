@@ -9,7 +9,7 @@
 ### 五、專案目的
 - 透過全球各地區政經及社會發展差異，分析出影響現代人類心理健康的主要因素。
 #### 使用時機：
-- 當使用者對生活感到厭倦時，可藉由此工具察覺生活環境潛在影響因素，進而改善生活及心理健康品質。
+- 當使用者對生活感到厭倦時，可藉由此工具察覺生活環境潛在影響因素，進而提升生活及心理健康品質。
 ### 六、資料說明：
 ["World Happiness Report, 2005-Present" on Kaggle](https://www.kaggle.com/datasets/usamabuttar/world-happiness-report-2005-present/data)
 #### 資料說明:
