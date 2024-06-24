@@ -50,10 +50,10 @@ def load_data()->list[dict]:
 
 class FilterData(object):
     @staticmethod
-    def get_selected_coordinate(sna:str,data:list[dict]) -> Info:    
+    def get_selected_coordinate(sna:str,data:list[dict]) -> _Info:    
         right_list:list[dict] = list(filter(lambda item:True if item['sna']==sna else False ,data))
         data:dict = right_list[0]
-        return Info.model_validate(data)
+        return _Info.model_validate(data)
     
 
 __all__ = ['load_data','FilterData']
