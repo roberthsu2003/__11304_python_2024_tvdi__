@@ -15,7 +15,7 @@ def _download_json():
         return all_data
     
 
-class Info(BaseModel):
+class _Info(BaseModel):
     sna:str
     sarea:str
     mday:datetime
@@ -37,12 +37,12 @@ class Info(BaseModel):
     def flex_string(cls, value:str)->str:
         return value.split(sep="_")[-1]
 
-class Youbike_Data(RootModel):
-    root:list[Info]
+class _Youbike_Data(RootModel):
+    root:list[_Info]
 
 def load_data()->list[dict]:
     all_data:dict[any] = _download_json()
-    youbike_data:Youbike_Data = Youbike_Data.model_validate(all_data)
+    youbike_data:_Youbike_Data = _Youbike_Data.model_validate(all_data)
     data = youbike_data.model_dump()
     return data
 
