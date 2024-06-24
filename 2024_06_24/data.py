@@ -1,6 +1,6 @@
 import requests
 from requests import Response
-from pydantic import BaseModel, RootModel, Field,field_validator,ConfigDict
+from pydantic import BaseModel, RootModel, Field,field_validator,ConfigDict,field_serializer
 from datetime import datetime
 
 def _download_json():
@@ -36,6 +36,12 @@ class _Info(BaseModel):
     @classmethod
     def flex_string(cls, value:str)->str:
         return value.split(sep="_")[-1]
+    
+    @field_serializer("mday","updateTime")
+    def datetime_to_str(self,value:datetime)->str:
+        return value.strftime('%Y-%m-%d %H:%M:%S')
+    
+
 
 class _Youbike_Data(RootModel):
     root:list[_Info]
