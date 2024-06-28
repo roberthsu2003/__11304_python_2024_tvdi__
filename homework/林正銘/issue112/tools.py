@@ -2,7 +2,7 @@ from tkinter.simpledialog import Dialog
 from tkinter import ttk
 from tkinter import Misc
 import tkinter as tk
-from data import Info
+from MLproject_Solar_Irradiance.weather.data import Info
 import tkintermapview as tkmap
 
 class CustomMessagebox(Dialog):    
