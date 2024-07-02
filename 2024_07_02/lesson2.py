@@ -18,7 +18,8 @@ def main():
                 return_bikes SMALLINT,
                 lat REAL,
                 lng REAL,
-                act boolean
+                act boolean,
+                UNIQUE (sna, updateTime)
             );
             '''
             cursor.execute(sql)
@@ -28,7 +29,9 @@ def main():
         with conn.cursor() as cursor:            
             insert_sql = '''
             INSERT INTO youbike(sna, sarea, ar, mday, updatetime, total, rent_bikes,return_bikes,lat,lng,act)
-            VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);
+            VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+            ON CONFLICT (sna, updateTime) 
+			DO NOTHING;
             '''
             for site in all_data:
                 cursor.execute(insert_sql,(site['sna'],
