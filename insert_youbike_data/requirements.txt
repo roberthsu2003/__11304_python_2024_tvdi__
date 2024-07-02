@@ -2,3 +2,4 @@ requests
 pydantic
 psycopg2-binary
 python-dotenv
+python-crontab
