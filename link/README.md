@@ -107,5 +107,38 @@ https://youtube.com/live/aayDV7POSns
 
 
 
+#### 2024_06_17_早上
+
+https://youtube.com/live/f43lyGl-ABQ
+
+
+---
+
+#### 2024_06_17_下午
+
+https://youtube.com/live/d4WJ9rahRO4
+
+
+---
+
+#### 2024_06_24_早上
+
+https://youtube.com/live/oGfsVU3kAe8
+
+---
+
+
+#### 2024_06_24_下午
+
+https://youtube.com/live/JW2JFU4gfd4
+
+---
+
+
+
+
+
+
+
 
 
