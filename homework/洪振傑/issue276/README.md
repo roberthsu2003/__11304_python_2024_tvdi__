@@ -1,4 +1,5 @@
-[程式碼](data.py)
+[程式碼](lesson2.py)
+[data模組](./data.py)
 
 > ## 建立資料庫
 
