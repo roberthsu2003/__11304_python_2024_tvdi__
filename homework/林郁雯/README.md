@@ -13,3 +13,5 @@
 ### [HW(issue#248)](https://github.com/kalmiavicky/__11304_python_2024_tvdi__/tree/main/homework/%E6%9E%97%E9%83%81%E9%9B%AF/issue248)
 
 ### [HW(issue#276)](https://github.com/kalmiavicky/__11304_python_2024_tvdi__/tree/main/homework/%E6%9E%97%E9%83%81%E9%9B%AF/issue276)
+
+### [HW(issue#293)](https://github.com/kalmiavicky/__11304_python_2024_tvdi__/tree/main/homework/%E6%9E%97%E9%83%81%E9%9B%AF/issue293)
