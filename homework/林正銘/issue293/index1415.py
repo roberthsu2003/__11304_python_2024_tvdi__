@@ -31,12 +31,13 @@ def main():
         all_data:list[dict] = ubikedata.load_data()
         with conn.cursor() as cursor:  # as cursor自動close()
             # 建立cursor, 寫入資料
-            insert_sql = '''
-                INSERT INTO youbike(sna, sarea, ar, mday, updatetime, total, rent_bikes, return_bikes, lat, lng, act)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)  
-             ON CONFLICT (sna, updateTime) DO NOTHING;   
+            select_sql = '''
+                select *
+                from youbike
+                order by updatetime desc
+                limit 1415 
             '''
-            
+            '''
             for site in all_data:
                 
                 cursor.execute(insert_sql , (
@@ -52,8 +53,15 @@ def main():
                     site['lng'],
                     site['act']
                 ))
-                
+            '''
+            select_data = cursor.execute(select_sql)    
+            row = cursor.fetchone()
+
+            while row is not None:
+                print(row)
+                row = cursor.fetchone()
     conn.close()
+    print(select_data)
 
 if __name__ == "__main__":
     main()
