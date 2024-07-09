@@ -8,12 +8,30 @@
     <title>Bootstrap demo</title>
   </head>
   <body>
-    <div class="container-md" style="background-color: blueviolet;">
-      Voluptate labore incididunt sit deserunt culpa. Qui cupidatat labore ullamco ea exercitation excepteur quis irure reprehenderit adipisicing nostrud eiusmod ut minim. Cillum excepteur magna enim culpa sunt nostrud incididunt aliqua sunt. Nulla magna adipisicing elit tempor. Tempor esse laborum eu sit commodo sint. Officia amet laborum sunt magna enim veniam tempor magna laboris ut. Commodo irure incididunt consequat est tempor elit aute culpa esse fugiat consectetur adipisicing.
-
-Adipisicing nisi ad eiusmod culpa culpa est est dolor duis commodo aliquip est nisi. Officia aliqua consectetur id minim ullamco laborum et ut. Minim duis nulla aute et esse. Reprehenderit exercitation cillum do consectetur aliquip anim. Ex ipsum aute non minim non labore dolore aliquip reprehenderit quis cillum consectetur. Irure velit dolore quis nisi est incididunt laboris non nulla sint est. Proident ea ut laboris nulla sint.
-
-Lorem et cupidatat irure velit officia. Aute deserunt cillum culpa id elit nostrud id anim. Cupidatat cillum aliqua duis laboris est velit aliquip anim. Cillum consequat enim ea culpa anim tempor ad occaecat excepteur sint minim adipisicing nulla non. Fugiat fugiat Lorem mollit nisi.
+    <div class="container-md">
+      <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{{url_for('index')}}">職能發展學院</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="{{url_for('static',filename='images/menu.png')}}" alt="Toggle navigation" style="width: 30px; height: 30px;"> 
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{url_for('new')}}">最新課表</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('youbike')}}">台北市Youbike</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('contact')}}">跟我聯絡</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
     </div>
   </body>
 </html>
