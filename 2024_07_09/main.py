@@ -8,7 +8,7 @@ def hello_world():
     return "<h1>Hello, World!</h1>"
 =======
 def index():
-    return render_template('index.html')
+    return render_template('index.html.jinja')
 
 @app.route('/hello')
 def hello():
