@@ -5,7 +5,7 @@ load_dotenv()
 
 
 
-def get_areas():
+def get_areas() -> list[tuple]:
     conn = psycopg2.connect(os.environ['POSTGRESQL_TOKEN'])
     with conn:
         with conn.cursor() as cursor:
@@ -15,5 +15,5 @@ def get_areas():
             '''
 
             cursor.execute(sql)
-            print(cursor.fetchall())
+            return cursor.fetchall()
     conn.close()
