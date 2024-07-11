@@ -15,5 +15,9 @@ body {
 
 
 {% block left_content%}
-{{ left }}
+{{ left | striptags | title  }}
+{% endblock%}
+
+{% block right_content%}
+{{ ['list', 'of', 'objects'] | join('|') }}
 {% endblock%}
