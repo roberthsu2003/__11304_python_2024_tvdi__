@@ -18,12 +18,15 @@
 <div class="container text-center">
     <div class="row">
         <div class="col-4" style="background-color:beige">
+        <form action="{{url_for('index')}}" method="get">
             <select class="form-select" aria-label="Default select example">
                 <option selected>請選擇行政區:</option>
                 {% for area in areas %}                
-                <option value="1">{{area}}</option>                
+                    <option value="{{area}}">{{area}}</option>          
                 {% endfor %}
             </select>
+            <button type="submit" class="btn btn-primary">送出</button>
+        </form>
         </div>
         <div class="col-8" style="background-color:bisque">
             Id non laborum occaecat consequat dolore commodo occaecat reprehenderit officia minim labore aliquip
