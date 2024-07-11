@@ -18,6 +18,15 @@ body {
 {{ left | striptags | title  }}
 {% endblock%}
 
+{#
+
 {% block right_content%}
-{{ ['list', 'of', 'objects'] | join('|') }}
+<ul>
+{% for item in ['item1','item2','item3','item4','item5']%}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>
+
 {% endblock%}
+
+#}
