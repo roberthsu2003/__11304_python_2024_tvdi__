@@ -12,3 +12,12 @@ body {
 }
 </style>
 {% endblock %}
+
+
+{% block left_content%}
+{{ left | striptags | title  }}
+{% endblock%}
+
+{% block right_content%}
+{{ ['list', 'of', 'objects'] | join('|') }}
+{% endblock%}
