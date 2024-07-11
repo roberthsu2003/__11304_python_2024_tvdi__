@@ -1,42 +1,67 @@
 {% extends 'base.html.jinja' %}
 
-{% block title%} 
+{% block title%}
 {{ super() }} - 首頁
 {% endblock %}
 
 {% block head%}
 {{ super() }}
 <style type"text/css">
-body {
-    background-color: blue;
-}
+    body {
+        background-color: blue;
+    }
 </style>
 {% endblock %}
 
 
 {% block main%}
-<div class="container text-center">      
-        <div class="row">
-          <div class="col-4" style="background-color:beige">
-           {% for area in areas %}
-                <h6>{{ area }}</h6>
-           {% endfor %}
-          </div>
-          <div class="col-8" style="background-color:bisque">
-            Id non laborum occaecat consequat dolore commodo occaecat reprehenderit officia minim labore aliquip cupidatat. Magna dolore incididunt quis officia occaecat dolor excepteur nostrud. Dolor in consectetur qui voluptate qui enim enim elit nulla duis veniam Lorem exercitation laboris. Minim proident esse mollit exercitation. Incididunt in incididunt laborum anim voluptate tempor laboris veniam irure labore ea. Dolor culpa occaecat ut enim pariatur sint. Excepteur magna labore amet nulla labore aute ullamco eu dolor.
+<div class="container text-center">
+    <div class="row">
+        <div class="col-4" style="background-color:beige">
+        <form action="{{url_for('index')}}" method="get">
+            <select class="form-select" aria-label="Default select example" id="area">
+                <option selected>請選擇行政區:</option>
+                {% for area in areas %}                
+                    <option value="{{area}}">{{area}}</option>          
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-primary">送出</button>
+        </form>
+        </div>
+        <div class="col-8" style="background-color:bisque">
+            Id non laborum occaecat consequat dolore commodo occaecat reprehenderit officia minim labore aliquip
+            cupidatat. Magna dolore incididunt quis officia occaecat dolor excepteur nostrud. Dolor in consectetur qui
+            voluptate qui enim enim elit nulla duis veniam Lorem exercitation laboris. Minim proident esse mollit
+            exercitation. Incididunt in incididunt laborum anim voluptate tempor laboris veniam irure labore ea. Dolor
+            culpa occaecat ut enim pariatur sint. Excepteur magna labore amet nulla labore aute ullamco eu dolor.
 
-Culpa enim amet ex elit magna cupidatat aute. Laboris ut in in do Lorem enim aliqua duis minim dolor officia. Ut commodo ex excepteur sit adipisicing incididunt ut cupidatat sit. Occaecat nisi id mollit laboris sit.
+            Culpa enim amet ex elit magna cupidatat aute. Laboris ut in in do Lorem enim aliqua duis minim dolor
+            officia. Ut commodo ex excepteur sit adipisicing incididunt ut cupidatat sit. Occaecat nisi id mollit
+            laboris sit.
 
-Non anim dolor nostrud sunt eu. Culpa ut dolor aliquip nulla. In excepteur Lorem enim excepteur labore magna cupidatat enim ullamco.
+            Non anim dolor nostrud sunt eu. Culpa ut dolor aliquip nulla. In excepteur Lorem enim excepteur labore magna
+            cupidatat enim ullamco.
 
-Incididunt dolor duis eiusmod elit voluptate id velit aute Lorem officia ipsum consectetur et. Culpa elit ex anim voluptate excepteur sint. Tempor et aute non minim. Aute id qui reprehenderit elit. Non labore aute culpa ut sunt exercitation. Duis ad cupidatat ut dolore incididunt irure non laborum. Ex non non ad laborum mollit est anim.
+            Incididunt dolor duis eiusmod elit voluptate id velit aute Lorem officia ipsum consectetur et. Culpa elit ex
+            anim voluptate excepteur sint. Tempor et aute non minim. Aute id qui reprehenderit elit. Non labore aute
+            culpa ut sunt exercitation. Duis ad cupidatat ut dolore incididunt irure non laborum. Ex non non ad laborum
+            mollit est anim.
 
-Id officia aliqua mollit laborum proident consectetur. Cupidatat labore ex non occaecat sit non sint ut dolor ullamco eiusmod. Elit veniam aute laborum ad est elit elit. Excepteur dolor do sit officia non qui ipsum. Eiusmod aliquip ipsum voluptate ullamco mollit pariatur laborum. Aute amet tempor esse elit adipisicing Lorem est officia consectetur tempor est consequat. Aliqua pariatur ex ea laboris tempor ad aliquip officia do cillum.
+            Id officia aliqua mollit laborum proident consectetur. Cupidatat labore ex non occaecat sit non sint ut
+            dolor ullamco eiusmod. Elit veniam aute laborum ad est elit elit. Excepteur dolor do sit officia non qui
+            ipsum. Eiusmod aliquip ipsum voluptate ullamco mollit pariatur laborum. Aute amet tempor esse elit
+            adipisicing Lorem est officia consectetur tempor est consequat. Aliqua pariatur ex ea laboris tempor ad
+            aliquip officia do cillum.
 
-Est irure reprehenderit eiusmod esse deserunt. Veniam tempor eu tempor id magna esse qui qui aliquip. Nisi nulla elit nulla eiusmod est in aute laboris eiusmod ipsum occaecat ullamco eiusmod ad. Nulla dolor do aliqua ut deserunt fugiat pariatur eu et irure. Culpa consequat anim consequat minim consectetur. Veniam cillum cupidatat quis Lorem qui eiusmod fugiat duis. Proident tempor fugiat velit tempor.
+            Est irure reprehenderit eiusmod esse deserunt. Veniam tempor eu tempor id magna esse qui qui aliquip. Nisi
+            nulla elit nulla eiusmod est in aute laboris eiusmod ipsum occaecat ullamco eiusmod ad. Nulla dolor do
+            aliqua ut deserunt fugiat pariatur eu et irure. Culpa consequat anim consequat minim consectetur. Veniam
+            cillum cupidatat quis Lorem qui eiusmod fugiat duis. Proident tempor fugiat velit tempor.
 
-Consequat in et esse elit sint dolor elit labore elit irure reprehenderit consectetur. Reprehenderit veniam ad sunt adipisicing pariatur. Velit laborum do sunt non irure eiusmod qui aliquip labore amet ex labore aute. Ullamco dolore ipsum pariatur adipisicing enim.
-          </div>
-        </div>      
+            Consequat in et esse elit sint dolor elit labore elit irure reprehenderit consectetur. Reprehenderit veniam
+            ad sunt adipisicing pariatur. Velit laborum do sunt non irure eiusmod qui aliquip labore amet ex labore
+            aute. Ullamco dolore ipsum pariatur adipisicing enim.
+        </div>
+    </div>
     </main>
-{% endblock %}
+    {% endblock %}
