@@ -18,7 +18,9 @@ body {
 <div class="container text-center">      
         <div class="row">
           <div class="col-4" style="background-color:beige">
-           {{ areas | join(',')}}
+           {% for area in areas %}
+                <h6>{{ area }}</h6>
+           {% endfor %}
           </div>
           <div class="col-8" style="background-color:bisque">
             Id non laborum occaecat consequat dolore commodo occaecat reprehenderit officia minim labore aliquip cupidatat. Magna dolore incididunt quis officia occaecat dolor excepteur nostrud. Dolor in consectetur qui voluptate qui enim enim elit nulla duis veniam Lorem exercitation laboris. Minim proident esse mollit exercitation. Incididunt in incididunt laborum anim voluptate tempor laboris veniam irure labore ea. Dolor culpa occaecat ut enim pariatur sint. Excepteur magna labore amet nulla labore aute ullamco eu dolor.
