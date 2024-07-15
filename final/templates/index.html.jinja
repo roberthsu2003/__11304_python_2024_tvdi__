@@ -1,0 +1,66 @@
+{% extends 'base.html.jinja' %}
+
+{% block title%}
+{{ super() }} - 首頁
+{% endblock %}
+
+{% block head%}
+{{ super() }}
+<style type"text/css">
+    body {
+        background-color:white;
+    }
+</style>
+{% endblock %}
+
+
+{% block main%}
+<div class="container text-center">
+    <div class="row">
+        <div class="col-2" style="background-color:beige">
+        <form action="{{url_for('index')}}" method="get">
+            <select class="form-select" aria-label="Default select example" name="area">
+                <option selected>{{show_area}}</option>
+                {% for area in areas %}
+                    {% if area != show_area %}               
+                        <option value="{{area}}">{{area}}</option>
+                    {% endif %}          
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-primary">送出</button>
+        </form>
+        </div>
+        <div class="col-10">
+            <h3 style="text-align:left;margin-top:0.5em">{{show_area}}</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                    <th scope="col">站點</th>
+                    <th scope="col">總車輛數</th>
+                    <th scope="col">可借</th>
+                    <th scope="col">可還</th>
+                    <th scope="col">時間</th>
+                    <th scope="col">狀態</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for sna in detail_snaes%}
+                        <tr>
+                            <th scope="row">{{sna[0]}}</th>
+                            <td>{{sna[1]}}</td>
+                            <td>{{sna[2]}}</td>
+                            <td>{{sna[3]}}</td>
+                            <td>{{sna[4]}}</td>
+                            {% if sna[5]%}
+                                <td>營業中</td>
+                            {% else %}
+                                <td>維修中</td>
+                            {% endif%}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </main>
+    {% endblock %}
