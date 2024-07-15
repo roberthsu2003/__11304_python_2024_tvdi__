@@ -20,9 +20,11 @@
         <div class="col-4" style="background-color:beige">
         <form action="{{url_for('index')}}" method="get">
             <select class="form-select" aria-label="Default select example" name="area">
-                <option selected>請選擇行政區:</option>
-                {% for area in areas %}                
-                    <option value="{{area}}">{{area}}</option>          
+                <option selected>{{show_area}}</option>
+                {% for area in areas %}
+                    {% if area != show_area %}               
+                        <option value="{{area}}">{{area}}</option>
+                    {% endif %}          
                 {% endfor %}
             </select>
             <button type="submit" class="btn btn-primary">送出</button>
