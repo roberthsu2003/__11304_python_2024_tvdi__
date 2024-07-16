@@ -4,6 +4,7 @@ from tkinter import ttk, messagebox,Misc
 import MLproject_Solar_Irradiance.weather.data as data
 from MLproject_Solar_Irradiance.weather.data import FilterData,Info
 from tools import CustomMessagebox
+#from data import FilterData,Info
 
 
 
