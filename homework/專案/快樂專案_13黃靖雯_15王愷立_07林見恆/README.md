@@ -1,17 +1,18 @@
-### 一、專案組名 - The Happiness Project 世界「快樂」專案
+### 一、專案組名 - The Happiness Project 人生快樂專案
 ### 二、專案組員
 - 黃靖雯
 - 王愷立
 - 林見恆
-### 三、專案網址
-### 四、專案目的：世界快樂指標與成因分析
-> (TBC) 程式集：mainML.py、dataSourceML.py
+### 三、專案程式碼 & Video Demo
+- [Python Code](./index.py)
+- [Video Demo](https://youtu.be/p6p-UhxdzWU)
+### 四、專案目的：分析影響「快樂」的各項生活指標及重要性
 ### 五、專案目的
 - 透過全球各地區政經及社會發展差異，分析出影響現代人類心理健康的主要因素。
 #### 使用時機：
-- 當使用者對生活感到厭倦時，可藉由此工具察覺生活環境潛在影響因素，進而改善生活及心理健康品質。
+- 當使用者對生活感到厭倦時，可藉由此工具察覺生活環境潛在影響因素，進而提升生活及心理健康品質。
 ### 六、資料說明：
-["World Happiness Report, 2005-Present" on Kaggle](https://www.kaggle.com/datasets/usamabuttar/world-happiness-report-2005-present/data)
+- ["World Happiness Report, 2005-Present" on Kaggle](https://www.kaggle.com/datasets/usamabuttar/world-happiness-report-2005-present/data)
 #### 資料說明:
 - **Log GDP per capita** is in terms of Purchasing Power Parity (PPP) adjusted to a constant 2017 international dollars, taken from the World Development Indicators (WDI) by the World Bank (version 17, metadata last updated on January 22, 2023). See Statistical Appendix 1 for more details. GDP data for 2022 are not yet available, so we extend the GDP time series from 2021 to 2022 using country-specific forecasts of real GDP growth from the OECD Economic Outlook No. 112 (November 2022) or, if missing, from the World Bank’s Global Economic Prospects (last updated: January 10, 2023), after adjustment for population growth. The equation uses the natural log of GDP per capita, as this form fits the data significantly better than GDP per capita.
 - The time series for **Healthy life expectancy** at birth is constructed based on data from the World Health Organization (WHO) Global Health Observatory data repository, with data available for 2005, 2010, 2015, 2016, and 2019. To match this report’s sample period (2005-2022), interpolation and extrapolation are used. See Statistical Appendix 1 for more details.
@@ -24,4 +25,9 @@
 
 
 ### 七、MVP視窗示意：
-![Windows - MVP](./MVP視窗示意.png)
+![Windows - Start](./img_window/window_originalsize.png)
+![Windows - 1](./img_window/window_1.png)
+![Windows - 2](./img_window/window_2.png)
+![Windows - 3](./img_window/window_3.png)
+![Windows - 4](./img_window/window_4.png)
+![Windows - 5](./img_window/window_5.png)
