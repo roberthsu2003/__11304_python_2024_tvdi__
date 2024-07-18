@@ -1,7 +1,7 @@
 from ttkthemes import ThemedTk  # Allows usage of themed Tkinter windows
 import tkinter as tk  # Standard Tkinter module for GUI elements
 from tkinter import ttk, messagebox  # Tkinter's themed widgets and standard message box dialogs
-import data  # Import the data module to load YouBike data (assumed to be defined elsewhere)
+import MLproject_Solar_Irradiance.weather.data as data  # Import the data module to load YouBike data (assumed to be defined elsewhere)
 
 # Define a class that inherits from ThemedTk
 class Window(ThemedTk):
