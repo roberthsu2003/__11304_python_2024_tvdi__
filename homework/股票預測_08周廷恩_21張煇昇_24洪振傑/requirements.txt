@@ -7,3 +7,4 @@ tkintermapview
 matplotlib
 seaborn
 yfinance
+scikit-learn
