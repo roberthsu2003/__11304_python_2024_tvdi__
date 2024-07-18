@@ -34,7 +34,7 @@ def main():
             insert_sql = '''
                 INSERT INTO youbike(sna, sarea, ar, mday, updatetime, total, rent_bikes, return_bikes, lat, lng, act)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)  
-                
+             ON CONFLICT (sna, updateTime) DO NOTHING;   
             '''
             
             for site in all_data:
