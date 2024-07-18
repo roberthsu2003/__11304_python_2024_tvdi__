@@ -1,5 +1,0 @@
-ttkthemes
-tkinterweb
-googlemaps
-python-dotenv
-pillow
