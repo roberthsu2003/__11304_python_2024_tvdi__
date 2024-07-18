@@ -9,7 +9,6 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from PIL import Image, ImageTk
 import analysis
 
-# cd 波士頓房價預測
 
 # 使用 getInfo 函數從 dataset.py 中載入資料集
 df = getInfo()
@@ -19,9 +18,8 @@ if df.empty:
     print("無法載入資料集，請檢查文件路徑。")
     exit()
 
-# 我對Python程式設計和GUI開發方面，以及數據分析和機器學習領域的專案，非常有興趣和專業要求，請使用"繁體中文"回答我的問題
 # =================================================
-#備註:圖表內容要有描述
+
 class MyWindow(tk.Tk):
     def __init__(self):
         super().__init__()
