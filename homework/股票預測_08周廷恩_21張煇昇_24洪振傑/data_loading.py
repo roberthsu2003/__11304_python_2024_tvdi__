@@ -12,10 +12,11 @@ def Check_Data_Csv():
     else:
         return False
 
-def Get_N_Month_Data(month_num:int,stock_id:int) ->pd.DataFrame:
-    ticker = f'{stock_id}.TW'  # 這裡使用蘋果公司（AAPL）作為例子
-    start_date = '2008-01-01'
-    end_date = '2023-12-31'
+def Get_N_Month_Data(stock_id:int,start_year:str, start_month:str, end_year:str, end_month:str) ->pd.DataFrame:
+    ticker = f'{stock_id}.TW'
+    start_date = f'{start_year}-{start_month}-01'
+    end_date = pd.to_datetime(f'{end_year}-{end_month}-01') + pd.offsets.MonthEnd(0)
+    end_date = end_date.strftime('%Y-%m-%d')
     data = yf.download(ticker, start=start_date, end=end_date)
     data = data.reset_index()
 

@@ -9,7 +9,7 @@ def main():
         window.destroy()
         window.quit()
 
-    window = Window()
+    window = Window(theme="arc")
     window.protocol("WM_DELETE_WINDOW",on_closing)
     window.mainloop()
 
