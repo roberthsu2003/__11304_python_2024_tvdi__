@@ -25,25 +25,23 @@
 ### [專案簡報2_WIN_PIE](https://github.com/arminlinster/__11304_python_2024_tvdi__/tree/main/homework/%E6%9E%97%E6%AD%A3%E9%8A%98/issue264/%E5%B0%88%E6%A1%88%E4%B8%BB%E9%A1%8Cyoubike_2.0_%E5%8D%B3%E6%99%82%E6%9F%A5%E8%A9%A2%E7%B3%BB%E7%B5%B1_3_18/Python小專案製作app1b.pdf)
 ### [專案簡報3_WIN_MAPS](https://github.com/arminlinster/__11304_python_2024_tvdi__/tree/main/homework/%E6%9E%97%E6%AD%A3%E9%8A%98/issue264/%E5%B0%88%E6%A1%88%E4%B8%BB%E9%A1%8Cyoubike_2.0_%E5%8D%B3%E6%99%82%E6%9F%A5%E8%A9%A2%E7%B3%BB%E7%B5%B1_3_18/Python小專案製作app1c.pdf)
 
-###專案目錄
+### 專案目錄
 ### 1. WEB : a54c1 ( flask --app app run )
 ### 2. PIE : a54 ( python app1b.py )
 ### 3. MAP : a54b ( python app1c.py )
 
 ### WEB介面影片
-        ### 錄製_2024_07_17_22_01_03_699.mp4
+       ### 錄製_2024_07_17_22_01_03_699.mp4
 ### WIN_PIE_介面影片
        ### 錄製_2024_07_17_22_12_14_634.mp4
        ### 錄製_2024_07_17_22_18_02_594.mp4
 ### WIN_MAPS_介面影片
        ### 錄製_2024_07_17_22_21_42_123.mp4
 
-### 影片
-[WEB介面影片](https://github.com/arminlinster/__11304_python_2024_tvdi__/blob/main/homework/%E6%9E%97%E6%AD%A3%E9%8A%98/issue264/%E9%8C%84%E8%A3%BD_2024_07_17_22_01_03_699.mp4)
+### youtube影片連結
+[WEB介面影片](https://youtu.be/txCCD7N2SK8)
 
-[WIN_PIE_介面影片1](https://github.com/arminlinster/__11304_python_2024_tvdi__/blob/main/homework/%E6%9E%97%E6%AD%A3%E9%8A%98/issue264/%E9%8C%84%E8%A3%BD_2024_07_17_22_12_14_634.mp4)
+[WIN_PIE_介面影片](https://youtu.be/8ej_9hsKhn4)
 
-[WIN_PIE_介面影片2](https://github.com/arminlinster/__11304_python_2024_tvdi__/blob/main/homework/%E6%9E%97%E6%AD%A3%E9%8A%98/issue264/%E9%8C%84%E8%A3%BD_2024_07_17_22_18_02_594.mp4)
-
-[WIN_MAPS_介面影片](https://github.com/arminlinster/__11304_python_2024_tvdi__/blob/main/homework/%E6%9E%97%E6%AD%A3%E9%8A%98/issue264/%E9%8C%84%E8%A3%BD_2024_07_17_22_21_42_123.mp4)
+[WIN_MAPS_介面影片](https://youtu.be/xUknHdhkN64)
 ===
