@@ -4,6 +4,7 @@ import data
 app = Dash(__name__)
 
 areas = [tup[0] for tup in data.get_areas()]
+
 app.layout = html.Div([
     dcc.Dropdown(
        options = areas,
