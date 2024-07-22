@@ -22,21 +22,28 @@
 ![picture_1](./images/window_1.png)
 ### 2.下拉式選單
 ![picture_1](./images/window_2.png)
-### 3.數據一
+### 3.資料前處理
 ![picture_1](./images/window_3.png)
-### 4.移除數據一按鈕
+
+備註:   
+偏態(Skewness): -0.04  (選擇不處理離群值)  
+峰度(Kurtosis): 0.07 
+### 4.特徵變數，閾值最初設為 0.4 得到的特徵變數
 ![picture_1](./images/window_4.png)
-### 5.數據二內容
+### 4_1.新增模型分數
+![picture_1](./images/window_4_1.png)
+### 5.特徵變數，輸入閾值 0.51 得到特徵變數"RM"、"LSTAT"
 ![picture_1](./images/window_5.png)
-### 6.數據三內容
+### 6.閾值為 0.51 模型分數
 ![picture_1](./images/window_6.png)
-### 7.模型分數
+### 7.離開前提醒
 ![picture_1](./images/window_7.png)
-### 8.離開前提醒
-![picture_1](./images/window_8.png)
+
 ---
 
-### 欄位名稱說明
+### 補充:
+### 一、在特徵變數視窗中，新增模型分數
+### 二、欄位名稱說明
 CRIM: 犯罪率  
 ZN: 住宅用地比例超過 25,000 平方英尺的比例  
 INDUS: 每個城鎮的非零售業比例  
@@ -54,4 +61,4 @@ PRICE: 房屋價格的中位數
 
 ---
 
-### [影片連結](https://youtu.be/7XZ0tEzBzfE)
+### [影片連結](https://youtu.be/Fxh2hlDtfaQ)

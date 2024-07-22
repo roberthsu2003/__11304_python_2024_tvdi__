@@ -1,4 +1,3 @@
-
 ## issue264_3_18_蕭林_2人組_作業
 
 作業 issue#264
@@ -25,10 +24,4 @@
 ### 2. PIE : a54 ( python app1b.py )
 ### 3. MAP : a54b ( python app1c.py )
 
-## youtube影片連結
-[WEB介面影片](https://youtu.be/txCCD7N2SK8)
-
-[WIN_PIE_介面影片](https://youtu.be/8ej_9hsKhn4)
-
-[WIN_MAPS_介面影片](https://youtu.be/xUknHdhkN64)
-
+## youtube影片連結(https://youtu.be/CuYflSaWhO8?si=gFUnLWMjp7YcdAMH)
