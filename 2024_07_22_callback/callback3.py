@@ -15,10 +15,23 @@ app.layout = html.Div([
         html.Tr([html.Td(['x',html.Sup(2),html.Td(id='square')])]),
         html.Tr([html.Td(['x',html.Sup(3),html.Td(id='cube')])]),
         html.Tr([html.Td(['2',html.Sup('x'),html.Td(id='twos')])]),
-        html.Tr([html.Td(['3',html.Sup(3),html.Td(id='three')])]),
+        html.Tr([html.Td(['3',html.Sup(3),html.Td(id='threes')])]),
         html.Tr([html.Td(['x',html.Sup('x'),html.Td(id='x^x')])]),
+        ])
     ])
-])
+
+@callback(
+    Output('square','children'),
+    Output('cube','children'),
+    Output('twos','children'),
+    Output('threes','children'),
+    Output('x^x','children'),
+    Input('num-multi','value')
+)
+
+def callback_a(x:int) -> tuple:
+    return x**2, x**3, 2**x, 3**x, x**x
+
 
 
 if __name__ == '__main__':
