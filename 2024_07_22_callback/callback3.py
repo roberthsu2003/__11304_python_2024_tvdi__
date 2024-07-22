@@ -6,4 +6,5 @@ print(external_stylesheets)
 app = Dash(__name__,external_stylesheets=external_stylesheets)
 
 if __name__ == '__main__':
+
     app.run(debug=True)
