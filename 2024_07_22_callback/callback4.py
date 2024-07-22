@@ -28,6 +28,13 @@ def set_cities_options(selected_country:str):
     return [{'label':i, 'value':i} for i in all_options[selected_country]]
 
 @callback(
+        Output('cities-radio','value'),
+        Input('cities-radio','options')
+)
+def set_cities_value(available_options):
+    return available_options[0]['value']
+
+@callback(
     Output('display-selected-values','children'),
     Input('countries-radio','value'),
     Input('cities-radio','value')
