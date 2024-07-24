@@ -1,7 +1,10 @@
 from flask import Flask,render_template,request
+from dash import youbike
 import data
 
 app = Flask(__name__)
+app.register_blueprint(youbike.dashbp)
+
 @app.route("/")
 def index():
     #print(list(map(lambda value:value[0],data.get_areas())))
