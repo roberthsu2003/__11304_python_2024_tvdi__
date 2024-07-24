@@ -8,7 +8,7 @@ import data
 app = Flask(__name__)
 app.register_blueprint(youbike.dashbp)
 application = DispatcherMiddleware(app,{
-    "/dash/callback":app1.server
+    "/dash1/callback":app1.server
 })
 
 @app.route("/")
