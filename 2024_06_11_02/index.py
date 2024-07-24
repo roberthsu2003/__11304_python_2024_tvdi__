@@ -1,4 +1,4 @@
-import MLproject_Solar_Irradiance.weather.data as data
+import data
 import tkinter as tk
 from tkinter import ttk
 from ttkthemes import ThemedTk

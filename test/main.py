@@ -1,9 +1,15 @@
 from flask import Flask,render_template,request
-from dash import youbike
+from dash1 import youbike
+from werkzeug.middleware.dispatcher import DispatcherMiddleware
+from werkzeug.serving import run_simple
+from dash1.callback import app1
 import data
 
 app = Flask(__name__)
 app.register_blueprint(youbike.dashbp)
+application = DispatcherMiddleware(app,{
+    "/dash/callback":app1.server
+})
 
 @app.route("/")
 def index():
@@ -21,3 +27,6 @@ def index():
 @app.errorhandler(404)
 def page_error(e):
     return '<p>this page not found</p>'
+
+if __name__ == '__main__':
+   run_simple("localhost",8080, application, use_debugger=True, use_reloader=True) 
