@@ -3,10 +3,12 @@ from dash1 import youbike
 from werkzeug.middleware.dispatcher import DispatcherMiddleware
 from werkzeug.serving import run_simple
 from dash1.callback import app1
+from login.main import bp
 import data
 
 app = Flask(__name__)
 app.register_blueprint(youbike.dashbp)
+app.register_blueprint(bp)
 application = DispatcherMiddleware(app,{
     "/dash1/callback":app1.server
 })
@@ -23,7 +25,8 @@ def index():
     #show_area -> 要顯示的行政區
     #detail_snaes -> 該行政區所有站點資訊   
     return render_template('index.html.jinja',areas=areas,show_area=selected_area,detail_snaes=detail_snaes)    
-    
+
+
 @app.errorhandler(404)
 def page_error(e):
     return '<p>this page not found</p>'
