@@ -2,7 +2,7 @@ from dash import Dash,html,dcc,Input,Output,callback
 import pandas as pd
 import plotly.express as px
 
-app1 = Dash(__name__,requests_pathname_prefix='/dashboard/board1')
+app1 = Dash(__name__,requests_pathname_prefix='/dashboard/app1')
 
 df = pd.read_csv('https://plotly.github.io/datasets/country_indicators.csv')
 
