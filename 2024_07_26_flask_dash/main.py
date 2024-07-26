@@ -3,6 +3,10 @@ import data
 
 app = Flask(__name__)
 @app.route("/")
+def index1():
+    return render_template("index1.html.jinja")
+
+@app.route("/index1")
 def index():
     #print(list(map(lambda value:value[0],data.get_areas())))
     selected_area = request.args.get('area')
