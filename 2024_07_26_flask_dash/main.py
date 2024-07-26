@@ -3,11 +3,11 @@ import data
 
 app = Flask(__name__)
 @app.route("/")
-def index1():
-    return render_template("index1.html.jinja")
+def index():
+    return render_template("index.html.jinja")
 
 @app.route("/index1")
-def index():
+def index1():
     #print(list(map(lambda value:value[0],data.get_areas())))
     selected_area = request.args.get('area')
     areas = [tup[0] for tup in data.get_areas()]
@@ -17,7 +17,7 @@ def index():
     #areas->所有行政區 
     #show_area -> 要顯示的行政區
     #detail_snaes -> 該行政區所有站點資訊   
-    return render_template('index.html.jinja',areas=areas,show_area=selected_area,detail_snaes=detail_snaes)    
+    return render_template('index1.html.jinja',areas=areas,show_area=selected_area,detail_snaes=detail_snaes)    
     
     
     
