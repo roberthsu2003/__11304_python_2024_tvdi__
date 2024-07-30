@@ -1,4 +1,4 @@
-from flask import Blueprint,render_template
+from flask import Blueprint,render_template,request
 from flask_wtf import FlaskForm
 from wtforms import EmailField,PasswordField
 from wtforms.validators import DataRequired,Length
@@ -13,4 +13,15 @@ class LoginForm(FlaskForm):
 @auth_blueprint.route("/auth/login",methods=['GET', 'POST'])
 def index():
     form = LoginForm()
+    if request.method == "POST":
+        if form.validate_on_submit():
+            print("表單傳送過來")
+            print("驗証了token")
+            email = form.email.data
+            password = form.password.data
+            print(f'email:{email}')
+            print(f'password:{password}')
+    else:
+        print("這是第一次進入")
+    
     return render_template('/auth/login.html.jinja',form=form)
