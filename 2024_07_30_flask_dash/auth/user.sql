@@ -17,3 +17,7 @@ VALUES('robert','roberthsu@gmail.com','12345')
 
 SELECT *
 FROM 使用者
+
+SELECT 密碼,姓名
+FROM 使用者
+WHERE 電子郵件 = 'roberthsu@gmail.com'
