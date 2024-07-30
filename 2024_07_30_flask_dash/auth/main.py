@@ -1,7 +1,7 @@
-from flask import Blueprint
+from flask import Blueprint,render_template
 
 auth_blueprint = Blueprint('auth',__name__)
 @auth_blueprint.route("/auth/")
 @auth_blueprint.route("/auth/login")
 def index():
-    return "<h1>我是auth的首頁</h1>"
+    return render_template('/auth/login.html.jinja')
