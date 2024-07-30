@@ -4,3 +4,4 @@ flask
 gunicorn
 dash
 pandas
+Flask-WTF

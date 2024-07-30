@@ -1,7 +1,16 @@
-from flask import Blueprint
-
+from flask import Blueprint,render_template
+from flask_wtf import FlaskForm
+from wtforms import EmailField,PasswordField
+from wtforms.validators import DataRequired,Length
 auth_blueprint = Blueprint('auth',__name__)
 
-@auth_blueprint.route("/auth/")
+class LoginForm(FlaskForm):
+    email = EmailField('郵件信箱',validators=[DataRequired()])
+    PasswordField('密碼',validators=[DataRequired(),Length(min=4, max=20)])
+
+
+@auth_blueprint.route("/auth/",methods=['GET', 'POST'])
+@auth_blueprint.route("/auth/login",methods=['GET', 'POST'])
 def index():
-    return "<h1>我是auth的首頁</h1>"
+    form = LoginForm()
+    return render_template('/auth/login.html.jinja',form=form)

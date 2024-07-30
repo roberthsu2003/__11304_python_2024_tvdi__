@@ -6,8 +6,10 @@ from dashboard.board2 import app2
 import data
 import dashboard
 from auth.main import auth_blueprint
+import secrets
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = secrets.token_hex(16)
 app.register_blueprint(auth_blueprint)
 
 application = DispatcherMiddleware(app,{
