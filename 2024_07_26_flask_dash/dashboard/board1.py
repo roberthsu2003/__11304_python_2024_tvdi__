@@ -47,8 +47,8 @@ app1.layout = html.Div([
     )
 
 ])
-
-@callback(
+#如果要連結2個dash,必需要加上app1
+@app1.callback(
     Output('indicator-graphic','figure'),
     Input('xaxis-column','value'),
     Input('yaxis-column','value'),
