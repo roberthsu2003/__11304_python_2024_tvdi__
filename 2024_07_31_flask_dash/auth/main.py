@@ -19,7 +19,7 @@ class UserRegistrationFrom(FlaskForm):
 @auth_blueprint.route('/auth/register',methods=['GET','POST'])
 def register():
     form = UserRegistrationFrom()
-    if request.metho == "POST":
+    if request.method == "POST":
         print("使用者送出表單")
     else:
         print("第一進入")
