@@ -26,17 +26,23 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">最新課表</a>
             </li>
+            {% if 'username' in session %}
             <li class="nav-item">
               <a class="nav-link" href="./dashboard/app2">台北市Youbike</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="./dashboard/app1">跟我聯絡</a>
+              <a class="nav-link" href="./dashboard/app1">GDP</a>
             </li>
             
             <li class="nav-item">
+              <a class="nav-link" href="/auth/logout">登出</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
               <a class="nav-link" href="/auth/login">登入</a>
             </li>
+            {% endif %}
           </ul>
 
         </div>
