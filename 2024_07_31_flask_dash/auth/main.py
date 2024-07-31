@@ -1,4 +1,4 @@
-from flask import Blueprint,render_template,request
+from flask import Blueprint,render_template,request,session,redirect
 from flask_wtf import FlaskForm
 from wtforms import EmailField,PasswordField
 from wtforms.validators import DataRequired,Length
@@ -24,7 +24,8 @@ def index():
             print(f'password:{password}')
             is_ok, username = validateUser(email,password)
             if is_ok:
-                print(f"您好:{username}")
+                session['username'] = username
+                return redirect('/')
             else:
                 print(f'密碼錯誤')
 
