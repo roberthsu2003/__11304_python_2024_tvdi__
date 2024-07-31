@@ -2,7 +2,7 @@ from flask import Blueprint,render_template,request,session,redirect
 from flask_wtf import FlaskForm
 from wtforms import EmailField,PasswordField,StringField,SelectField,BooleanField,DateField,TextAreaField
 from wtforms.validators import DataRequired,Length,Regexp,Optional,EqualTo
-from .datasource import validateUser
+from .datasource import validateUser,insert_data,InvalidEmailException
 import datetime,secrets
 from werkzeug.security import generate_password_hash, check_password_hash
 auth_blueprint = Blueprint('auth',__name__)
@@ -58,6 +58,16 @@ def register():
             conn_token = secrets.token_hex(16)
             print("亂數密碼",conn_token)
 
+            try:
+                insert_data([uName,uGender,uPhone,uEmail,isGetEmail,uBirthday_str,uAboutMe,hash_password,conn_token])
+            except InvalidEmailException:
+                form.uEmail.errors.append("有相同的email")
+            except Exception as e:
+                print(e)
+                form.uEmail.errors.append("不知名的錯誤")
+            else:
+                return redirect(f'/auth/login/{uEmail}')
+
 
             
 
@@ -75,6 +85,7 @@ class LoginForm(FlaskForm):
 
 @auth_blueprint.route("/auth/",methods=['GET', 'POST'])
 @auth_blueprint.route("/auth/login",methods=['GET', 'POST'])
+@auth_blueprint.route("/auth/login/<email>",methods=['GET', 'POST'])
 def index(email:str | None = None):
     form = LoginForm()
     if request.method == "POST":
@@ -95,8 +106,8 @@ def index(email:str | None = None):
 
     else:
         print("這是第一次進入")
-        #if email is not None:
-        #    form.email.data = email
+        if email is not None:
+            form.email.data = email
     
     return render_template('/auth/login.html.jinja',form=form)
 
