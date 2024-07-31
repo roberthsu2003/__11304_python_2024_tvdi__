@@ -5,6 +5,10 @@ from wtforms.validators import DataRequired,Length
 from .datasource import validateUser
 auth_blueprint = Blueprint('auth',__name__)
 
+@auth_blueprint.route('/auth/register')
+def register():
+    return render_template('/auth/register.html.jinja')
+
 class LoginForm(FlaskForm):
     email = EmailField('郵件信箱',validators=[DataRequired()])
     password = PasswordField('密碼',validators=[DataRequired(),Length(min=4, max=20)])
