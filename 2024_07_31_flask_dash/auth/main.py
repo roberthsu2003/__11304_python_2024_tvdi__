@@ -3,6 +3,8 @@ from flask_wtf import FlaskForm
 from wtforms import EmailField,PasswordField,StringField,SelectField,BooleanField,DateField,TextAreaField
 from wtforms.validators import DataRequired,Length,Regexp,Optional,EqualTo
 from .datasource import validateUser
+import datetime,secrets
+from werkzeug.security import generate_password_hash, check_password_hash
 auth_blueprint = Blueprint('auth',__name__)
 
 class UserRegistrationFrom(FlaskForm):
@@ -20,7 +22,47 @@ class UserRegistrationFrom(FlaskForm):
 def register():
     form = UserRegistrationFrom()
     if request.method == "POST":
-        print("使用者送出表單")
+        if form.validate_on_submit():
+            uName = request.form['uName']
+            print("姓名=",uName)
+
+            uGender = form.uGender.data
+            print("性別=",uGender)
+
+            uPhone = form.uPhone.data
+            print("電話=",uPhone)
+
+            uEmail = form.uEmail.data
+            print("email=",uEmail)
+
+            isGetEmail = form.isGetEmail.data
+            print('促銷=', "接受" if isGetEmail else "不接受")
+
+            uBirthday:datetime.date | None = form.uBirthday.data
+            if uBirthday is not None:
+                uBirthday_str = uBirthday.strftime("%Y-%m-%d")
+                print("出生年月日:",uBirthday_str)
+            else:
+                uBirthday_str = "1900-01-01"
+
+            uAboutMe = form.uAboutMe.data
+            print("關於我",uAboutMe)
+
+            uPass = form.uPass.data
+            print("密碼:",uPass)
+
+            #產生password hash
+            hash_password = generate_password_hash(uPass,method='pbkdf2:sha256',salt_length=8)
+            print("暗碼",hash_password)
+
+            conn_token = secrets.token_hex(16)
+            print("亂數密碼",conn_token)
+
+
+            
+
+
+
     else:
         print("第一進入")
 
