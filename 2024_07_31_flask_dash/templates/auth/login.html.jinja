@@ -16,4 +16,15 @@
 <input type="submit" value="確定" class="btn btn-primary">
 
 </form>
+    {% if form.email.errors %}
+        <ul>
+        {% for error in form.email.errors %}
+            <li>
+                <div class="'alert alert-warngin" role="alert">
+                    {{error}}
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
 {% endblock%}

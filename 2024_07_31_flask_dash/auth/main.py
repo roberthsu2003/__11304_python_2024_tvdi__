@@ -27,7 +27,8 @@ def index():
                 session['username'] = username
                 return redirect('/')
             else:
-                print(f'密碼錯誤')
+                form.email.errors.append("帳號或密碼錯誤")
+                form.email.data = ""
 
     else:
         print("這是第一次進入")
