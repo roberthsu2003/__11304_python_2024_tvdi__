@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,session
 from werkzeug.middleware.dispatcher import DispatcherMiddleware
 from werkzeug.serving import run_simple
 from dashboard.board1 import app1
@@ -19,7 +19,11 @@ application = DispatcherMiddleware(app,{
 
 @app.route("/")
 def index():
-    return render_template("index.html.jinja")
+    if 'username' in session:
+        user = session['username']
+    else:
+        user = None
+    return render_template("index.html.jinja",username = user)
 
 @app.route("/index1")
 def index1():
