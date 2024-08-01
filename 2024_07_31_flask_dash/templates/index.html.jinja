@@ -1,0 +1,23 @@
+{% extends 'base.html.jinja' %}
+
+{% block title%}
+{{ super() }} - 首頁
+{% endblock %}
+
+{% block head%}
+{{ super() }}
+<style type"text/css">
+    body {
+        background-color:white;
+    }
+</style>
+{% endblock %}
+
+
+{% block main%}
+{% if username %}
+    <h3>歡迎光臨{{username}}</h3>
+{% endif %}
+
+<h1>這是首頁</h1>
+{% endblock %}

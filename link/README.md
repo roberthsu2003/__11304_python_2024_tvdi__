@@ -204,9 +204,17 @@ https://youtube.com/live/ekjK7GumpXs
 
 https://youtube.com/live/OwzxqvIOuQQ
 
-#### 2024_03_30_下午
+#### 2024_07_30_下午
 
 https://youtube.com/live/F2S9vQ2ahPs
+
+#### 2024_07_31_早上
+
+https://youtube.com/live/OKHWw5kXWfQ
+
+### 2024_07_31_下午
+
+https://youtube.com/live/3N6z8A1MBqg
 
 
 
