@@ -7,7 +7,7 @@ import plotly.express as px
 import base64
 
 # Load data
-file_path = '/Users/jesshuang/Documents/GitHub/__11304_python_2024_tvdi__/homework/專案/快樂專案_13黃靖雯_15王愷立_07林見恆/World Happiness Report_new.csv'
+file_path = '/Users/jesshuang/Documents/GitHub/__11304_python_2024_tvdi__/homework/專案/快樂專案WEB_13黃靖雯_15王愷立_07林見恆/World Happiness Report_new.csv'
 
 if os.path.exists(file_path):
     data = pd.read_csv(file_path)
@@ -47,7 +47,7 @@ messages = {
 }
 
 # Load and encode image
-img_path = "/Users/jesshuang/Documents/GitHub/__11304_python_2024_tvdi__/homework/專案/快樂專案_13黃靖雯_15王愷立_07林見恆/img.png"
+img_path = "/Users/jesshuang/Documents/GitHub/__11304_python_2024_tvdi__/homework/專案/快樂專案WEB_13黃靖雯_15王愷立_07林見恆/img.png"
 encoded_image = base64.b64encode(open(img_path, 'rb').read()).decode('ascii')
 
 # Define the layout
