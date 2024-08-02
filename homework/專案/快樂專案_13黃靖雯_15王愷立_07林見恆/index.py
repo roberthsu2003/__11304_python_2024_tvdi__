@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from PIL import Image, ImageTk
 
-file_path = '/Users/jesshuang/Documents/GitHub/jess_project/the_happiness_project/World Happiness Report_new.csv'
+file_path = '/Users/jesshuang/Documents/GitHub/__11304_python_2024_tvdi__/homework/專案/快樂專案_13黃靖雯_15王愷立_07林見恆/World Happiness Report_new.csv'
 
 if os.path.exists(file_path):
     data = pd.read_csv(file_path)
@@ -25,7 +25,7 @@ title_label = ttk.Label(root, text="The Happiness Project\n什麼使你「快樂
 title_label.pack(pady=(60,0))
 titleFrame.pack(padx=100, pady=(10, 5))
 
-img_path = "/Users/jesshuang/Documents/GitHub/jess_project/the_happiness_project/img.png"
+img_path = "/Users/jesshuang/Documents/GitHub/__11304_python_2024_tvdi__/homework/專案/快樂專案_13黃靖雯_15王愷立_07林見恆/img.png"
 image = Image.open(img_path)
 image = image.resize((140, 140))
 photo = ImageTk.PhotoImage(image)
